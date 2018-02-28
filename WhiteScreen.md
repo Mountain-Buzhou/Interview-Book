@@ -2,7 +2,7 @@
 
 ### A:
 
-`Author: @havean`
+`Author: @heaven`
 
 #### 请求发出前可能有：
 - 资源不合法，如跨域，https 用 http 等等，csp 等等
