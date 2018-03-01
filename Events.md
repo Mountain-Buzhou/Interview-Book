@@ -8,8 +8,8 @@
 #### struct
 ```js
 this._events = {
-    change: [callback_on_change1, callback_on_change2, ....],
-    ....
+    change: [callback_on_change1, callback_on_change2, ...],
+    ...
 }
 ```
 
@@ -66,7 +66,7 @@ var triggerEvents = function(events, args) {
 
 #### once
 ```js
-var once = _.once(function() {function(){
+var once = _.once(function(){
     self.off(name, once);
     callback.apply(this, arguments);
 });
