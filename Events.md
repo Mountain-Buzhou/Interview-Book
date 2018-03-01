@@ -3,7 +3,7 @@
 
 ### A: 
 
-`Author: @backbone @yeelan0319`
+`Author: @backbone @yeelan0319 @liyuk @bailnl`
 
 #### struct
 ```js
@@ -74,4 +74,6 @@ return this.on(name, once, context);
 ```
 
 ### Roast:
-Events的引入减少了callback的层级调用。这个问题是一个基本概念，但不要忽视了这个基本概念，2018年滴滴三面就死在这个问题上。
+- Events的引入减少了callback的层级调用。
+- 解耦，一对多的关系。
+这个问题是一个基本概念，但不要因为简单而忽视了这个基本概念。
