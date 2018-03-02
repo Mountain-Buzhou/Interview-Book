@@ -1,6 +1,6 @@
-### Q: 闭包 javascript
+## Q: 闭包 javascript
 
-### A: 
+## A: 
 
 `Author: @liyuk`
 

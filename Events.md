@@ -1,11 +1,11 @@
 
-### Q: 写一个events，backbone或者jquery，包括on、off、once、trigger
+## Q: 写一个events，backbone或者jquery，包括on、off、once、trigger
 
-### A: 
+## A: 
 
 `Author: @backbone @yeelan0319 @liyuk @bailnl`
 
-#### struct
+### struct
 ```js
 this._events = {
     change: [callback_on_change1, callback_on_change2, ...],
@@ -13,7 +13,7 @@ this._events = {
 }
 ```
 
-#### on
+### on
 ```js
 Events.on = function(name, callback, context) {
     if (callback) {
@@ -49,7 +49,7 @@ Events.off = function(name, callback, context) {
 }
 ```
 
-#### trigger
+### trigger
 ```js
 //当绑定3个以下回调函数的时候Backbone会做如下优化处理，据说这样是可以提高执行效率的。    
 var triggerEvents = function(events, args) {
@@ -64,7 +64,7 @@ var triggerEvents = function(events, args) {
 };
 ```
 
-#### once
+### once
 ```js
 var once = _.once(function(){
     self.off(name, once);
@@ -73,7 +73,7 @@ var once = _.once(function(){
 return this.on(name, once, context);
 ```
 
-### Roast:
+## Roast:
 - Events的引入减少了callback的层级调用。
 - 解耦，一对多的关系。
 这个问题是一个基本概念，但不要因为简单而忽视了这个基本概念。
