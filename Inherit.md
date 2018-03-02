@@ -41,15 +41,9 @@ Sub.prototype = {
 ```
 
 #### 注意
-- 如果原型包含引用类型，所有实例会共享该类型
+- 如果原型包含引用类型，所有实例会共享该类型
 - 创建子类型时，无法在不影响其他实例的情况下，给超类的构造函数传递参数  
 
-#### 多继承
-```js
-var sub = new Sub();
-
-Sub.prototype = Object.assign({}, Sub.prototype, new Super2());
-```
 
 **实际使用时会较少单独使用原型链**
 
@@ -78,14 +72,6 @@ function Sub() {
 ```
 #### 注意
 - 函数无法复用
-
-#### 多继承
-```js
-function Sub() {
-    Super1.call(this);
-    Super2.call(this);
-}
-```
 
 ### 3-组合继承
 即将原型链和构造函数组合在一起。  
@@ -138,11 +124,11 @@ function _create(o) {
     return clone;
 }
 ```
-寄生本质上就是进行浅拷贝后生成了新的对象，然后在新的对象上去添加方法，最后返回该新对象。从而实现不对原对象进行修改，并获得了原对象所有方法。
+寄生本质上就是进行浅拷贝后生成了新的对象，然后在新的对象上去添加方法，最后返回该新对象。从而实现不对原对象进行修改，并获得了原对象所有方法。
 
 ### 6-寄生组合式继承
 组合式继承会有两次调用超类型构造函数的问题。
-
+
 ```js
 function Super() {};
 
@@ -153,7 +139,7 @@ function Sub(name) {
 
 // 原型链继承
 Sub.prototype = new Super();  // 第一次调用Super
-// 增强对象
+// 增强对象
 Sub.prototype.constructor = Sub;
 
 // 生成实例
@@ -195,7 +181,26 @@ var sub = new Sub();
 - 复杂数据结构，诸如树、图等结构的复用和扩展
 - canvas，基本图像类 派生出 线 圆 等各个需要的东西`@vamcc`
 
+### 其他
+多继承是个伪命题，会导致菱形继承。
+```js
+B extends A
+C extends A
 
+D extends B, C
+
+// 原型链合并
+var sub = new Sub();
+
+Sub.prototype = Object.assign({}, Sub.prototype, new Super2());
+
+// 构造函数
+function Sub() {
+    Super1.call(this);
+    Super2.call(this);
+}
+```
+有兴趣去看看C++的菱形继承和虚继承，没兴趣不用在意。
 
 ## Roast
 基本概念！基本概念！基本概念！  
