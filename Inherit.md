@@ -226,7 +226,7 @@ if (typeof Object.create !== "function") {
 }
 ```
 
-## 8-ES6 Class `@ruanyifeng`
+## ES6 Class `@ruanyifeng`
 es6的class其实就是个语法糖，babel转出来的依旧是寄生组合式继承。
 具体的使用没有太多的可以说的，需要注意super即可以当函数，也可以实例。这部分不做细说，因为很复杂，有兴趣参考[es6 Class的继承](http://es6.ruanyifeng.com/#docs/class-extends#super-关键字)
 
