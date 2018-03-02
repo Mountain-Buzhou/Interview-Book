@@ -7,6 +7,7 @@
 这部分内容其实在2015年就有过详细的编写，但是最近发现当年的代码似乎并没有很明白的阐述原理，重新翻了高程整理一下。  
 特别强调一下，基本概念！基本概念！基本概念！（怨念）  
 
+## ES5
 
 ### 1-原型链
 ```js
@@ -175,6 +176,56 @@ var sub = new Sub();
 ```
 **寄生组合式继承是最`引用`类型最理想的继承范式**
 
+### Object.create `@MDN`
+```js
+// Super - 父类(superclass)
+function Super() {
+  this.x = 0;
+  this.y = 0;
+}
+
+// 父类的方法
+Super.prototype.move = function(x, y) {
+  this.x += x;
+  this.y += y;
+  console.info('Super moved.');
+};
+
+// Sub - 子类(subclass)
+function Sub() {
+  Super.call(this); // call super constructor.
+}
+
+// 子类续承父类
+Sub.prototype = Object.create(Super.prototype);
+Sub.prototype.constructor = Sub;
+
+// 因为使用“.prototype =...”后,constructor会改变为“=...”的那个
+// constructor，所以要重新指定.constructor 为自身。
+```
+
+#### polyfill
+尽管在 ES5 中 Object.create支持设置为[[Prototype]]为null，但因为那些ECMAScript5以前版本限制，此 polyfill 无法支持该特性。
+
+```js
+if (typeof Object.create !== "function") {
+    Object.create = function (proto, propertiesObject) {
+        if (typeof proto !== 'object' && typeof proto !== 'function') {
+            throw new TypeError('Object prototype may only be an Object: ' + proto);
+        } else if (proto === null) {
+            throw new Error("This browser's implementation of Object.create is a shim and doesn't support 'null' as the first argument.");
+        }
+
+        if (typeof propertiesObject != 'undefined') throw new Error("This browser's implementation of Object.create is a shim and doesn't support a second argument.");
+
+        function F() {}
+        F.prototype = proto;
+
+        return new F();
+    };
+}
+```
+
 ### 继承在js当中的使用
 - 高阶函数+工厂模式，可以实现继承的效果，原理偏向于构造函数实现继承
 - react、vue等基础库对于各种基础类型的继承
@@ -201,6 +252,14 @@ function Sub() {
 }
 ```
 有兴趣去看看C++的菱形继承和虚继承，没兴趣不用在意。
+
+
+## ES6 Class `@ruanyifeng`
+es6的class其实就是个语法糖，babel转出来的依旧是寄生组合式继承。
+具体的使用没有太多的可以说的，需要注意super即可以当函数，也可以实例。这部分不做细说，因为很复杂，有兴趣参考[es6 Class的继承](http://es6.ruanyifeng.com/#docs/class-extends#super-关键字)
+
+需要注意的是，**ES5的继承，实质是先创造子类的实例对象this，然后再将父类的方法添加到this上面（Parent.apply(this)）。ES6 的继承机制完全不同，实质是先创造父类的实例对象this（所以必须先调用super方法），然后再用子类的构造函数修改this。**
+
 
 ## Roast
 基本概念！基本概念！基本概念！  
