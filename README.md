@@ -15,10 +15,10 @@ some valuable interview questions
 - [继承（基本概念，划重点）](/Inherit.md)
 - 闭包（基本概念，划重点）
 - 模版引擎
-- shell命令
-- bash命令
+- shell/bash命令
 - git命令
 - iframe
 - batch
 - diff/patch
 - ast/babel
+- 小程序如何与native通信，react-native实现原理
