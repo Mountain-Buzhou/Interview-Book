@@ -13,8 +13,8 @@ some valuable interview questions
 
 - [写一个events，backbone或者jquery，包括on、off、once、trigger](/Events.md)
 - [继承（基本概念，划重点）](/Inherit.md)
-- 闭包（基本概念，划重点）
-- 模版引擎
+- [闭包（基本概念，划重点）](/Clojure.md)
+- [模版引擎](/Template.md)
 - shell/bash命令
 - git命令
 - iframe
