@@ -15,6 +15,7 @@ some valuable interview questions
 - [继承（基本概念，划重点）](/Inherit.md)
 - [闭包（基本概念，划重点）](/Clojure.md)
 - [模版引擎](/Template.md)
+- [promise以及一些扩展](/Promise.md)
 - shell/bash命令
 - git命令
 - iframe
