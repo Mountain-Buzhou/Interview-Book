@@ -23,3 +23,8 @@ some valuable interview questions
 - diff/patch
 - ast/babel
 - 小程序如何与native通信，react-native实现原理
+
+#### http
+- http1.0和http1.1的区别
+- http2具体内容
+- https具体内容

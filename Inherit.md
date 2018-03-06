@@ -230,10 +230,27 @@ if (typeof Object.create !== "function") {
 }
 ```
 
-## ES6 Class `@ruanyifeng`
+## ES6 
+### Class extends `@ruanyifeng`
 es6的class其实就是个语法糖，babel转出来的依旧是寄生组合式继承。
 具体的使用没有太多的可以说的，需要注意super即可以当函数，也可以实例。这部分不做细说，因为很复杂，有兴趣参考[es6 Class的继承](http://es6.ruanyifeng.com/#docs/class-extends#super-关键字)。  
 需要注意的是，**ES5的继承，实质是先创造子类的实例对象this，然后再将父类的方法添加到this上面（Parent.apply(this)）。ES6 的继承机制完全不同，实质是先创造父类的实例对象this（所以必须先调用super方法），然后再用子类的构造函数修改this。**
+
+### Object.setPrototypeOf
+将一个指定的对象的原型设置为另一个对象或者null  
+
+```js
+// 语法
+Object.setPrototypeOf(obj, prototype)
+
+// 实现原理
+Object.setPrototypeOf = Object.setPrototypeOf || function(obj, proto) {
+    obj.__proto__ = proto;
+    return obj; 
+}
+```
+
+## 其他
 
 ### 继承在js当中的使用
 - 高阶函数+工厂模式，可以实现继承的效果，原理偏向于构造函数实现继承
@@ -241,7 +258,7 @@ es6的class其实就是个语法糖，babel转出来的依旧是寄生组合式�
 - 复杂数据结构，诸如树、图等结构的复用和扩展
 - canvas，基本图像类 派生出 线 圆 等各个需要的东西`@vamcc`
 
-### 其他
+### 多继承
 多继承是个伪命题，会导致菱形继承。
 ```js
 B extends A
