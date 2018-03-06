@@ -8,7 +8,7 @@ some valuable interview questions
 - [浏览器加载白屏是什么原因？](/WhiteScreen.md)
 - [千万访问量的项目，前端需要注意些什么？](/DozensOfVisits.md)
 
-### Team Manage
+### Team Management
 - [给你一个二十人的新团队，你作为前端负责人你怎样去做？](/Team.md)
 - [前端的阶段](/Stages.md)
 
