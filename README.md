@@ -7,7 +7,10 @@ some valuable interview questions
 
 - [浏览器加载白屏是什么原因？](/WhiteScreen.md)
 - [千万访问量的项目，前端需要注意些什么？](/DozensOfVisits.md)
-- 给你一个二十人的新团队，你作为前端负责人你怎样去做？
+
+### Team Manage
+- [给你一个二十人的新团队，你作为前端负责人你怎样去做？](/Team.md)
+- [前端的阶段](/Stages.md)
 
 ### General
 
@@ -16,6 +19,7 @@ some valuable interview questions
 - [闭包（基本概念，划重点）](/Clojure.md)
 - [模版引擎](/Template.md)
 - [promise以及一些扩展](/Promise.md)
+- event loop
 - shell/bash命令
 - git命令
 - iframe
