@@ -153,9 +153,13 @@ var sub = new Sub();
 ```js
 // 寄生
 function inherit(sub, super) {
-    var prototype = Object(super.prototype);  // 创建对象，创建超类型原型副本
-    prototype.constructor = sub;              // 增强对象，弥补因重写原型而失去的默认constructor
-    sub.prototype = prototype;                // 指定对象
+    // 高程三中的写法是 var prototype = Object(super.prototype);
+    // 这样写可能有些问题，会污染超类型的原型，保持疑惑
+    // 所以有可能是用Object.create，或者上文提到的原型式继承_obejct，或者寄生式继承的_create
+    // Comment: @bramble
+    var prototype = Object(super.prototype);         // 创建对象，创建超类型原型副本
+    prototype.constructor = sub;                     // 增强对象，弥补因重写原型而失去的默认constructor
+    sub.prototype = prototype;                       // 指定对象
 }
 ```
 修改后的寄生组合模式为
@@ -176,7 +180,7 @@ var sub = new Sub();
 ```
 **寄生组合式继承是最`引用`类型最理想的继承范式**
 
-### 7-Object.create `@MDN`
+### 7-Object.create `@MDN` `兼容性：IE9+`
 ```js
 // Super - 父类(superclass)
 function Super() {
@@ -228,8 +232,7 @@ if (typeof Object.create !== "function") {
 
 ## ES6 Class `@ruanyifeng`
 es6的class其实就是个语法糖，babel转出来的依旧是寄生组合式继承。
-具体的使用没有太多的可以说的，需要注意super即可以当函数，也可以实例。这部分不做细说，因为很复杂，有兴趣参考[es6 Class的继承](http://es6.ruanyifeng.com/#docs/class-extends#super-关键字)
-
+具体的使用没有太多的可以说的，需要注意super即可以当函数，也可以实例。这部分不做细说，因为很复杂，有兴趣参考[es6 Class的继承](http://es6.ruanyifeng.com/#docs/class-extends#super-关键字)。  
 需要注意的是，**ES5的继承，实质是先创造子类的实例对象this，然后再将父类的方法添加到this上面（Parent.apply(this)）。ES6 的继承机制完全不同，实质是先创造父类的实例对象this（所以必须先调用super方法），然后再用子类的构造函数修改this。**
 
 ### 继承在js当中的使用
