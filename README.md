@@ -19,7 +19,7 @@ some valuable interview questions
 - [闭包（基本概念，划重点）](/Clojure.md)
 - [模版引擎](/Template.md)
 - [promise以及一些扩展](/Promise.md)
-- event loop
+- event loop
 - shell/bash命令
 - git命令
 - iframe

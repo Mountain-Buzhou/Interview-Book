@@ -2,7 +2,7 @@
 
 ## A:   
 
-`Author: @liyuk @cN @bailnl @菩提大叔 @史神`
+`Author: @liyuk @cN @bailnl @菩提大叔 @史神`
 
 ![团队管理](/assets/imgs/team.png)
 
