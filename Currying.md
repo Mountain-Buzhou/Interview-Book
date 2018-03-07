@@ -32,7 +32,7 @@ https://www.zhihu.com/question/36525679/answer/67924020)
 接下来说面试题，主要引用了[柯里化在工程中有什么好处? - 赵雨森的回答 - 知乎](
 https://www.zhihu.com/question/37774367/answer/192978122)，以及我之前积累的几段代码。
 
-### 延迟计算
+#### 延迟计算
 
 ```js
 // curring 函数
@@ -181,6 +181,19 @@ Function.prototype.bind = function(oThis) {
 }
 
 ```
+---
+### uncurrying
+```js
+Function.prototype.uncurry = function() {
+    var _this = this;
+    return function() {
+        return Function.prototype.call.apply(_this, arguments);
+    }   
+}
+```
+- 为Function原型添加unCurrying方法，这样所有的function都可以被借用；
+- 返回一个借用其它方法的函数，这是目的；
+- 借用call方法实现，但call方法参数传入呢？借用apply，至此完毕。
 
 ---
 ### 推荐库
