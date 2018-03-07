@@ -19,6 +19,7 @@
 [Functional Programming in Javascript === Garbage](https://awardwinningfjords.com/2014/04/21/functional-programming-in-javascript-equals-garbage.html)   
 
 [贺老关于《Functional Programming in Javascript === Garbage》的吐槽](https://github.com/hax/hax.github.com/issues/14)   
+
 [Jim的吐槽: JavaScript可以作为函数式语言学习吗？ - Jim Liu的回答 - 知乎](
 https://www.zhihu.com/question/36525679/answer/67924020)
 
