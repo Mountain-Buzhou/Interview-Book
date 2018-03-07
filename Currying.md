@@ -91,7 +91,7 @@ function add(num) {
             return calulate;
         } else {
             Array.prototype.push.apply(args, Array.prototype.splice.call(arguments, 0));
-            return add;
+            return addNum;
         }
     }
 
