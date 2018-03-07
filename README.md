@@ -10,13 +10,13 @@ some valuable interview questions
 
 ### Team Management
 - [给你一个二十人的新团队，你作为前端负责人你怎样去做？](/Team.md)
-- [前端的阶段](/Stages.md)
+- [前端的阶段是怎样的？不同阶段应该具备怎样的技能？](/Stages.md)
+- [如何去学习？（关于开发人员的个人成长）](/Learning.md)
 
 ### General
 
 - [写一个events，backbone或者jquery，包括on、off、once、trigger](/Events.md)
 - [继承（基本概念，划重点）](/Inherit.md)
-- [闭包（基本概念，划重点）](/Clojure.md)
 - [模版引擎](/Template.md)
 - [promise以及一些扩展](/Promise.md)
 - event loop
@@ -28,7 +28,11 @@ some valuable interview questions
 - ast/babel
 - 小程序如何与native通信，react-native实现原理
 
-#### http
+#### HTTP
 - http1.0和http1.1的区别
 - http2具体内容
 - https具体内容
+
+#### Function Program
+- [闭包（基本概念，划重点）](/Clojure.md)
+- [柯里化（Currying）](/Currying.js)
