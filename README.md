@@ -35,4 +35,4 @@ some valuable interview questions
 
 #### Function Program
 - [闭包（基本概念，划重点）](/Clojure.md)
-- [柯里化（Currying）](/Currying.js)
+- [柯里化（Currying）](/Currying.md)
