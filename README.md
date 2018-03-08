@@ -11,13 +11,21 @@
 
 ## Base
 
-基础的面试问题题库已经有很多了，我觉得这个不错，如果需要基础知识的梳理，可以看看这个面试题库。**最好作为知识的梳理，而不只是背面试题。**
+我将**最基础**的前端的知识点分为三个部分：
+- html+css+js
+- 网络、性能、测试、编码
+- 自动化、工程化的开发  
+
+这三个划分出来的只是最为基础的内容，学习这部分内容一方面需要对于书面知识的阅读，也需要在项目中加以实践。所谓的面试题无非就是基础的知识点，加上一些真实工程中会遇到的问题。面试的重点也并非是你彻底的去实现某个算法，而是表述清楚一套解决方案或者算法逻辑。  
+前端面试其实挺浪费时间的，相对来说问过多的基础问题，不如问一些具有代表性的能够考察多方面深度的问题。这些问题虽然有答案模板，但是不理解你也不知道在说什么。所以**多看书，多实践**，将认识和实践相结合才能深入理解这些概念。  
+
+基础的面试问题题库已经有很多了，我觉得这个不错，如果需要基础知识的梳理，可以看看这个面试题库。**最好作为知识的梳理，而不只是背面试题。**个人觉得这个里面的题大概是入门级别的，刚学的时候看看就可以了。
 >[中文前端面试大全：qiu-deqing/FE-interview](https://github.com/qiu-deqing/FE-interview)  
 
-这个题库是英文的，相对来说体系更为分明一些，但是没有答案所以需要自己去查找和解答。
+这个题库是英文的，相对来说体系更为分明一些，但内容较少，可以作为梳理结构的时候看看。
 >[h5bp/Front-end-Developer-Interview-Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 
-最后这个白皮书是我非常推荐的，不仅是前端面试，更多的是工程面试的方方面面，非常值得一读。
+最后这个白皮书相对来说内容非常值得一读，关于技术本身的问题也不算太多，但有非常多非技术类的面试技巧、面试实例、提问方式的介绍和讲解。
 >[yangshun/tech-interview-handbook](https://github.com/yangshun/tech-interview-handbook)
 
 ---
@@ -52,14 +60,17 @@
 - https具体内容
 
 #### HOLE :)
-- event loop
-- shell/bash命令
-- git命令
+- [event loop](https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be)
 - iframe
 - batch
 - diff/patch
 - ast/babel
-- 小程序如何与native通信，react-native实现原理
 
-#### 
+#### Command
+- shell/bash命令
+- git命令
+
+#### Product
 - 一个feed流，有哪些展现方式？如果当前页面可视区有5个格子，而你有20条信息需要展示，请问有哪些自动展示的算法？
+- [移动端的缓存机制有哪几种？](https://segmentfault.com/a/1190000004132566)
+- 小程序如何与native通信？react-native实现原理？jsbridge如何实现？
