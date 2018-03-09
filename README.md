@@ -2,18 +2,22 @@
 
 `Author: @liyuk @onion`
 
+[TOC]
+
 ## Abstract
 网络上的资源其实已经足够多了，所以在进行搜索的时候需要极大的筛选成本。为了减少这种低效的筛选，我将一些零散的知识整理在一起。  
 
-`Base`这个部分是几个前端知识库的链接，里面的内容比较浅显易懂，但不够深入。**所以不要觉得看完面试题就ok，还需要深入理解各种概念的原理。**
+`Entry`这个部分是几个前端知识库的链接，里面的内容比较浅显易懂，但不够深入。**所以不要觉得看完面试题就ok，还需要深入理解各种概念的原理**。
 
-`Collection`来自日常的面试、闲聊和偶尔的突发奇想，主要是觉得比较有趣，所以有做一些记录和分类。我又加上了去年帮人梳理知识结构的时候的一大堆题，所以排列上会显得有些混乱，将就看吧。
+`Collection`来自日常的面试、闲聊和偶尔的突发奇想，主要是觉得比较有趣，所以有做一些记录和分类。我和onion讨论了下，决定把这个模块分为三个大的内容，基础、进阶、框架，以及一些我之前整理的内容也会分类。
 
-`Foundation`这个部分是计算机基础的概念，包括计算机组成原理、操作系统、编译原理、计算机网络、数据结构与算法，**有志者事竟成**。   
+`Teamwork`这个部分则是关于团队管理、以及个人非技术上的一些发展相关的杂谈，也有介绍如何学习前端的文章（滑稽）。
+
+`Foundation`这个部分是计算机基础的概念，包括计算机组成原理、操作系统、编译原理、计算机网络、数据结构与算法。这个部分就是所谓的补基础，构建完整的计算机体系结构，是向上成长的过程中必不可少的。   
 
 希望能够有助大家学习前端基础知识，以及提高姿势水平，跟大佬谈笑风生（**并不能帮你做到这一步**）。
 
-## Base
+## Entry
 
 我将**最基础**的前端的知识点分为三个部分：
 - html+css+js（闭包、作用域、异步、继承）
@@ -34,25 +38,82 @@
 >[yangshun/tech-interview-handbook](https://github.com/yangshun/tech-interview-handbook)
 
 这本书里面梳理的非常全面，可以作为知识体系的梳理来进行学习。
->[front-end-developer-handbook-2018](https://frontendmasters.gitbooks.io/front-end-developer-handbook-2018/)
+>[front-end-developer-handbook-2018](https://frontendmasters.gitbooks.io/front-end-developer-handbook-2018/)  
+
 
 ---
 ## Collection
 
-### Intersting
+这个模块分为三个部分，即基础`Basic`，进阶`Advanced`，框架`Framework`，这是相当科学的划分。
+
+### Basic
+
+- html5新标签有哪些
+- canvas、svg
+- webGL
+- 语义化
+- SEO
+- cookies、storage（sessionStorage、localStorage）
+- IndexedDB、Web SQL
+- manifest、worker、socket
+- Doctype
+- 合模型
+- 怪异模式和标准模式
+- DNS劫持是什么？
+- input和textarea的区别
+- 用一个div模拟textarea的实现
+- css3有什么新特性，浏览器支持怎么样
+- 伪类是什么？有哪些？会有哪些兼容性问题？如何处理？
+- css预处理器知道吗？用过哪些？有什么优劣？后处理器知道吗？
+- less、sass、postcss、prefix
+- 圣杯、双飞燕布局
+- float清除浮动
+- 层叠优先级
+- flex布局、 grid布局、table布局
+- 绘制三角形、矩形、菱形、梯形（奇巧淫技，可以不问）
+- spirte图（雪碧图）知道吗？使用姿势是怎样的？ svg雪碧图了解吗？
+- px、em、rem、vw、vh？rem的根节点样式在什么时候设置？
+- position有哪些？他们的定位原点是什么？
+- 媒体查询用css好还是用js好？
+- link和@import的区别？
+- 响应式设计的css
+- css低版本浏览器兼容问题，额外需要什么后缀来声明浏览器兼容
+- !important意义，是否应当规避使用？
+- BFC块级上下文、IFC，实现双栏高度对齐
+- BEM命名法，有什么优势，有什么劣势
+- 1px边框问题
+- （水平）居中有哪些实现方式、（垂直）居中有哪些实现方式
+- typeof以及类型转换
+- 函数是第一公民如何理解？
+- dom的节点操作？能够背api还是知道api？
+- ajax是什么？知道底层实现原理吗？知道fetch吗？自己封装过吗？
+- GET、POST意义？restful架构下还有别的什么请求？
+- OPTION请求做了什么？
+- 事件冒泡和事件捕获是怎样的？对应的默认方法有什么？一般在什么情况使用？
+- call、apply、bind
+- 如何判断数据类型
+- hoisting是什么？具体表现是怎样的？
+- 匿名函数是什么？
+- 函数表达式和函数声明的区别
+- let、const暂时性锁区知道吗？表现是怎样的？
+- 严格模式是什么？有什么好处？'use strict'
+- arguments是什么类型？callee和caller有什么区别？
+- 正则表达式
+- 内存泄漏
+- 垃圾回收机制
+- Date.format实现过吗？思路是怎样的？
+- 动画：setTimeout何时执行，requestAnimationFrame的优点
+- parseQuery
+- flatten
+- require.js的实现原理
+
+### Advanced
 
 - [打开一个网页经历了那些过程？](https://github.com/qiu-deqing/FE-interview#从浏览器地址栏输入url到显示页面的步骤以http为例)
 - [浏览器加载白屏是什么原因？](/WhiteScreen.md)
 - [千万访问量的项目，前端需要注意些什么？](/DozensOfVisits.md)
 
----
-### Team Management
-- [给你一个二十人的新团队，你作为前端负责人你怎样去做？](/Team.md)
-- [工程师的阶段是怎样的？不同阶段应该具备怎样的技能？](/Stages.md)
-- [我们为什么热爱学习](/Learning.md)
-
----
-### General
+#### General
 
 - [写一个events，backbone或者jquery，包括on、off、once、trigger](/Events.md)
 - [继承（重点）](/Inherit.md)
@@ -61,6 +122,10 @@
 - event loop [视频](https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be), [SPEC](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model)
 - [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
 - [作用域（重点）](http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html)
+- [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
+- [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
+
+
 
 #### Function Program
 - [闭包（重点）](/Clojure.md)
@@ -77,16 +142,30 @@
 - HTTPS如何实现？tsl/ssl是什么？对称加密、非对称加密在什么时候、对什么数据加密？
 - DNS劫持是什么？
 
+#### Optimization
+- 首屏优化
+- 预加载资源、预解析DNS
+- 懒加载图片怎么做
+- iframe一般怎么使用？
+- window.onload、document.ready顺序？iframe会阻塞吗？
+- cdn是什么？如何查找最近的cdn？
+- gzip、chunck
+- 前端安全：xss攻击和防范、CSRF、CORS
+- 硬件加速怎样开启
+- 优化中会提到缓存的问题，问：静态资源或者接口等如何做缓存优化
+- 页面DOM节点太多，会出现什么问题？如何优化？
 
-#### HTML
-> onion
+#### Product
+- 一个feed流，有哪些展现方式？如果当前页面可视区有5个格子，而你有20条信息需要展示，请问有哪些自动展示的算法？
+- [移动端的缓存机制有哪几种？](https://segmentfault.com/a/1190000004132566)
+- 小程序如何与native通信？react-native实现原理？jsbridge如何实现？
+- 过万条数据如何加载和渲染？
 
-#### CSS
-> onion
+#### Command
+- shell/bash命令
+- git命令
 
-#### Javascript
-> onion
-
+### Framework
 
 #### React
 - React的生命周期mount和update描述下
@@ -119,31 +198,14 @@
 - 作用域冲突  
 - angularjs(1.x)和angular(2.x)的区别
 
-#### Optimization
-- 首屏优化
-- 预加载资源、预解析DNS
-- 懒加载图片怎么做
-- iframe一般怎么使用？
-- window.onload、document.ready顺序？iframe会阻塞吗？
-- cdn是什么？如何查找最近的cdn？
-- gzip、chunck
-- 前端安全：xss攻击和防范、CSRF、CORS
-- 硬件加速怎样开启
-- 优化中会提到缓存的问题，问：静态资源或者接口等如何做缓存优化
-- 页面DOM节点太多，会出现什么问题？如何优化？
-
-#### Command
-- shell/bash命令
-- git命令
-
-#### Product
-- 一个feed流，有哪些展现方式？如果当前页面可视区有5个格子，而你有20条信息需要展示，请问有哪些自动展示的算法？
-- [移动端的缓存机制有哪几种？](https://segmentfault.com/a/1190000004132566)
-- 小程序如何与native通信？react-native实现原理？jsbridge如何实现？
-- 过万条数据如何加载和渲染？
+---
+## Team Management
+- [给你一个二十人的新团队，你作为前端负责人你怎样去做？](/Team.md)
+- [工程师的阶段是怎样的？不同阶段应该具备怎样的技能？](/Stages.md)
+- [我们为什么热爱学习](/Learning.md)
 
 ---
-### Foundation
+## Foundation
 补课大讲堂
 #### Operating System
 - 进程与线程
