@@ -2,8 +2,6 @@
 
 `Author: @liyuk @onion`
 
-[TOC]
-
 ## Abstract
 网络上的资源其实已经足够多了，所以在进行搜索的时候需要极大的筛选成本。为了减少这种低效的筛选，我将一些零散的知识整理在一起。  
 
@@ -46,6 +44,7 @@
 
 这个模块分为三个部分，即基础`Basic`，进阶`Advanced`，框架`Framework`，这是相当科学的划分。
 
+---
 ### Basic
 
 - html5新标签有哪些
@@ -107,6 +106,7 @@
 - flatten
 - require.js的实现原理
 
+---
 ### Advanced
 
 - [打开一个网页经历了那些过程？](https://github.com/qiu-deqing/FE-interview#从浏览器地址栏输入url到显示页面的步骤以http为例)
@@ -165,6 +165,7 @@
 - shell/bash命令
 - git命令
 
+---
 ### Framework
 
 #### React
