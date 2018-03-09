@@ -1,5 +1,7 @@
 # Interview-Questions-Answers
 
+`Author: @liyuk @onion`
+
 ## Abstract
 网络上的资源其实已经足够多了，所以在进行搜索的时候需要极大的筛选成本。为了减少这种低效的筛选，我将一些零散的知识整理在一起。  
 
@@ -73,74 +75,17 @@
 - 跨域是什么？http协议中如何判断跨域？如何解决跨域问题？
 - http2具体内容？SDPY了解么？
 - HTTPS如何实现？tsl/ssl是什么？对称加密、非对称加密在什么时候、对什么数据加密？
+- DNS劫持是什么？
+
 
 #### HTML
-- html5新标签有哪些
-- canvas、svg
-- webGL
-- 语义化
-- seo
-- cookies、storage（sessionStorage、localStorage）
-- IndexedDB、Web SQL
-- manifest、worker、socket
-- Doctype
-- 合模型
-- 怪异模式和标准模式
-- DNS劫持是什么？
-- input和textarea的区别
-- 用一个div模拟textarea的实现
+> onion
 
 #### CSS
-- css3有什么新特性，浏览器支持怎么样
-- 伪类是什么？有哪些？会有哪些兼容性问题？如何处理？
-- css预处理器知道吗？用过哪些？有什么优劣？后处理器知道吗？
-- less、sass、postcss、prefix
-- 圣杯、双飞燕布局
-- float清除浮动
-- 层叠优先级
-- flex布局、 grid布局、table布局
-- 绘制三角形、矩形、菱形、梯形（奇巧淫技，可以不问）
-- spirte图（雪碧图）知道吗？使用姿势是怎样的？ svg雪碧图了解吗？
-- px、em、rem、vw、vh？rem的根节点样式在什么时候设置？
-- position有哪些？他们的定位原点是什么？
-- 媒体查询用css好还是用js好？
-- link和@import的区别？
-- 响应式设计的css
-- css低版本浏览器兼容问题，额外需要什么后缀来声明浏览器兼容
-- !important意义，是否应当规避使用？
-- BFC块级上下文、IFC
-- BFC，双栏高度对齐
-- BEM命名法，有什么优势，有什么劣势
-- 1像素边框问题
-- （水平）居中有哪些实现方式、（垂直）居中有哪些实现方式
+> onion
 
 #### Javascript
-- [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
-- typeof以及类型转换
-- 函数是第一公民如何理解？
-- dom的节点操作？能够背api还是知道api？
-- ajax是什么？知道底层实现原理吗？知道fetch吗？自己封装过吗？
-- GET、POST意义？restful架构下还有别的什么请求？
-- 事件冒泡和事件捕获是怎样的？对应的默认方法有什么？一般在什么情况使用？
-- call、apply、bind
-- 如何判断数据类型
-- hoisting是什么？具体表现是怎样的？有例子吗？
-- 匿名函数是什么？
-- let、const暂时性锁区知道吗？表现是怎样的？
-- 严格模式是什么？
-- [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
-- webpack的实现原理是什么？loader的原理是什么？babel的原理是什么？
-- arguments是什么类型？callee和caller有什么区别？如何将arguments转换为array？
-- 正则表达式
-- 内存泄漏
-- 垃圾回收机制
-- Date.format实现过吗？思路是怎样的？
-- 函数表达式和函数声明的区别
-- 动画：setTimeout何时执行，requestAnimationFrame的优点
-- 手写parseInt的实现：要求简单一些，把字符串型的数字转化为真正的数字即可，但不能使用JS原生的字符串转数字的API，比如Number()
-- parseQuery
-- flatten
-- require.js的实现原理（如果使用过webpack，进一步会问，两者打包的异同及优缺点）  
+> onion
 
 
 #### React
