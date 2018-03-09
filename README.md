@@ -129,7 +129,8 @@
 - let、const暂时性锁区知道吗？表现是怎样的？
 - 严格模式是什么？
 - [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
-- arguments是什么类型？callee和caller有什么区别？
+- webpack的实现原理是什么？loader的原理是什么？babel的原理是什么？
+- arguments是什么类型？callee和caller有什么区别？如何将arguments转换为array？
 - 正则表达式
 - 内存泄漏
 - 垃圾回收机制
@@ -185,10 +186,6 @@
 - 硬件加速怎样开启
 - 优化中会提到缓存的问题，问：静态资源或者接口等如何做缓存优化
 - 页面DOM节点太多，会出现什么问题？如何优化？
-
-#### HOLE :)
-- batch
-- ast/babel
 
 #### Command
 - shell/bash命令
