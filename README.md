@@ -181,17 +181,13 @@
 - 什么时候使用computed, methods, watch？之间有什么样区别？
 - template 和 render(jsx) 有什么的联系？
 - this.$nextTick是如何设计的？
-- Vue双向数据绑定的实现
 
-#### Angular
-- Angular双向绑定原理
-- Angular的一些基础概念描述下
-- Angular的factory和service有什么联系
-- Angular的指令怎么写？compile和link有什么区别
-- 脏值检查是什么？
-- 隐式注入
-- 作用域冲突  
-- angularjs(1.x)和angular(2.x)的区别
+#### AngularJS
+尽管angularJS已经基本退出了历史舞台，但是详细有的同学还是做过相关的项目，并很有可能被面试官问起。
+- angularJS的数据绑定采用什么机制？详述原理
+- 如果通过angularJS的 directive/component 规划一套全组件化体系，可能遇到哪些挑战？
+- 一个angularJS应用应当如何良好地分层？
+- ng-click中写的表达式，能使用JS原生对象上的方法，比如Math.max之类的吗？为什么？
 
 ---
 ## Team Management
