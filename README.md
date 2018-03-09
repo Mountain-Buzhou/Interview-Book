@@ -108,15 +108,32 @@
 - [浏览器加载白屏是什么原因？](/WhiteScreen.md)
 - [千万访问量的项目，前端需要注意些什么？](/DozensOfVisits.md)
 
-#### General
+#### JavaScript语言理解
+这一章我们尽量带来较深层的JavaScript语言层次的问题，我们会拿出几个JavaScript较深入的点来讲。
 
-- [写一个events，backbone或者jquery，包括on、off、once、trigger](/Events.md)
+- 表达式和语句有什么区别？如何把语句转换为表达式？
+- 什么叫执行上下文栈(Execution Context Stack)? 一个函数调用会产生多少个上下文环境？如何激活一个上下文，什么叫caller(调用者)，什么叫callee(被调用者)？给你一段代码能否画出执行过程中的上下文堆栈变化？
+- 执行上下文包括哪些结构(状态/属性)，如何追踪关联代码的执行进度？
+- eval在调用的时候有哪些特别的地方？eval函数自身会产生上下文吗？会影响当前的调用上下文吗？
+- 什么叫变量对象？什么叫活动对象？
+- 词法作用域是什么？闭包是如何形成的？
+- var foo = function bar () {} 命名函数表达式中(上述的foo函数)bar变量是定义在哪一层作用域的？
+
+#### html
+- 讲一下whatwg标准上的event loop规范。(别说你没看过
+- microTask的有哪些，Task的有哪些？（最好答出来所有的
+- 构思一下利用Task和microTask来完成框架层面的时间调度( 比如vue是如何利用microTask来实现batch update的
+- 讲一下你对web components的理解
+
+其他的待补充，先哄老婆睡觉了
+#### 其他
+
+- [实现eventbus(发布订阅/观察者模式)](/Events.md)
 - [继承（重点）](/Inherit.md)
 - [模版引擎](/Template.md)
 - [promise以及一些扩展](/Promise.md)
 - event loop [视频](https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be), [SPEC](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model)
 - [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
-- [作用域（重点）](http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html)
 - [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
 - [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
@@ -127,7 +144,7 @@
 
 #### HTTP
 - http1.0和http1.1的区别
-- http请求码有哪些？301、302、303、304、307
+- http请求码有哪些？206、302、303、304、307
 - 能说下304具体怎样实现吗？
 - osi七层协议和tcp/ip四层协议
 - 三次握手和四次握手
