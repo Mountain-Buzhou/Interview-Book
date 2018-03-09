@@ -5,9 +5,11 @@
 
 `Base`这个部分是几个前端知识库的链接，里面的内容比较浅显易懂，但不够深入。**所以不要觉得看完面试题就ok，还需要深入理解各种概念的原理。**
 
-`Collection`来自日常的面试、闲聊和偶尔的突发奇想，主要是觉得比较有趣，所以有做一些记录和分类。  
+`Collection`来自日常的面试、闲聊和偶尔的突发奇想，主要是觉得比较有趣，所以有做一些记录和分类。我又加上了去年帮人梳理知识结构的时候的一大堆题，所以排列上会显得有些混乱，将就看吧。
 
-希望能够有助大家学习前端基础知识。
+`Foundation`这个部分是计算机基础的概念，包括计算机组成原理、操作系统、编译原理、计算机网络、数据结构与算法，**有志者事竟成**。   
+
+希望能够有助大家学习前端基础知识，以及提高姿势水平，跟大佬谈笑风生（**并不能帮你做到这一步**）。
 
 ## Base
 
@@ -51,15 +53,15 @@
 ### General
 
 - [写一个events，backbone或者jquery，包括on、off、once、trigger](/Events.md)
-- [继承（基本概念，划重点）](/Inherit.md)
+- [继承（重点）](/Inherit.md)
 - [模版引擎](/Template.md)
 - [promise以及一些扩展](/Promise.md)
 - event loop [视频](https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be), [SPEC](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model)
-- [异步](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
-- [作用域](http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html)
+- [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
+- [作用域（重点）](http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html)
 
 #### Function Program
-- [闭包（基本概念，划重点）](/Clojure.md)
+- [闭包（重点）](/Clojure.md)
 - [柯里化（Currying）](/Currying.md)
 
 #### HTTP
