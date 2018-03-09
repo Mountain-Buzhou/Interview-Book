@@ -70,10 +70,19 @@
 - [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
 - typeof以及类型转换
 
+#### React
+- React的生命周期
+- React的vdom实现
+- React的diff/patch算法原理
+- React的组件逻辑和组件库思路
+- React的数据流，flux相关
+- Redux、Mobx、Rxjs，发布订阅模式、观察者模式
+- Redux解决了什么痛点（有什么优点），又有什么缺点
+- Redux的中间件有哪些？redux-actions、redux-promise、redux-thunk、redux-saga、redux-immutable了解过哪些？说说差异   
+
 #### HOLE :)
 - iframe
 - batch
-- diff/patch
 - ast/babel
 
 #### Command
