@@ -49,6 +49,9 @@
 - [继承（基本概念，划重点）](/Inherit.md)
 - [模版引擎](/Template.md)
 - [promise以及一些扩展](/Promise.md)
+- event loop [视频](https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be), [SPEC](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model)
+- [异步](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
+- [作用域](http://www.cnblogs.com/TomXu/archive/2012/01/18/2312463.html)
 
 #### Function Program
 - [闭包（基本概念，划重点）](/Clojure.md)
@@ -59,8 +62,14 @@
 - http2具体内容
 - https具体内容
 
+#### CSS
+- BFC，双栏高度对齐
+
+#### Javascript
+- [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
+- typeof以及类型转换
+
 #### HOLE :)
-- [event loop](https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be)
 - iframe
 - batch
 - diff/patch

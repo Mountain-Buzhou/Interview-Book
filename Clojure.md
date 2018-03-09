@@ -17,7 +17,7 @@
 
 ```js
 var num = 1;
-var myObject = {
+var o = {
     num: 2,
     add: function() {
         this.num = 3;
@@ -33,10 +33,10 @@ var myObject = {
         console.log(this.num);
     }
 }
-myObject.add();
-console.log(myObject.num);
+o.add();
+console.log(o.num);
 console.log(num);
-var sub = myObject.sub;
+var sub = o.sub;
 sub();
 
 // 请写出输出结果
