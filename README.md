@@ -39,10 +39,10 @@
 
 ### Interesting
 关于一些Javascript里细节的点，可以看看这位大哥的博客，写的很清晰，代码实现很完整。
-[冴羽的博客](https://github.com/mqyqingfeng/Blog)   
+>[冴羽的博客](https://github.com/mqyqingfeng/Blog)   
 
 《前端要给力之系列》是一系列非常有趣的文章，同时讲的非常深入
-[前端要给力之系列](/Entry/Geili.md)
+>[前端要给力之系列](/Entry/Geili.md)
 
 
 ---
@@ -131,7 +131,6 @@
 其他的待补充，先哄老婆睡觉了
 #### 其他
 
-- [实现events(发布订阅/观察者模式)](/Collection/Events.md)
 - [继承（重点）](/Collection/Inherit.md)
 - event loop [视频](https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be), [SPEC](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model)
 - [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
@@ -182,6 +181,7 @@
 - [模版引擎](/Collection/Template.md)
 - 棋盘最短路（动态规划）
 - 反转二叉树
+- 二叉树遍历（前序、后序、中序）
 - 将两个有序数组合并成为一个有序数组
 - 双向链表寻找中间的元素，单向链表寻找中间的元素
 - 全选和单行选中的联动
@@ -191,6 +191,8 @@
 - 查找数组中第k大的数
 - 一个无重复元素的数组，求所有两数之和为k的组合
 - 变体题：一个无重复元素的数组，求元素和（元素个数小于n）为k的组合
+- [实现events(发布订阅/观察者模式)](/Collection/Events.md)
+- 找出数组中最大的两数之差
 
 #### Command
 - shell/bash命令
