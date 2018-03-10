@@ -27,17 +27,22 @@
 
 这三个划分出来的只是最为基础的内容，学习这部分内容一方面需要对于书面知识的阅读，也需要在项目中加以实践。
 
+### Naive
 基础的面试问题题库已经有很多了，个人觉得这个里面的题大概是入门级别的，刚学的时候看看就可以了。
 >[中文前端面试大全：qiu-deqing/FE-interview](https://github.com/qiu-deqing/FE-interview)  
-
-这个题库是英文的，相对来说体系更为分明一些，但内容较少，可以简单看看。
->[h5bp/Front-end-Developer-Interview-Questions](https://github.com/h5bp/Front-end-Developer-Interview-Questions)
 
 白皮书里关于非技术的问题值得一读。
 >[yangshun/tech-interview-handbook](https://github.com/yangshun/tech-interview-handbook)
 
 这本书里面梳理的非常全面，可以作为知识体系的梳理来进行学习。
 >[front-end-developer-handbook-2018](https://frontendmasters.gitbooks.io/front-end-developer-handbook-2018/)  
+
+### Interesting
+关于一些Javascript里细节的点，可以看看这位大哥的博客，写的很清晰，代码实现很完整。
+[冴羽的博客](https://github.com/mqyqingfeng/Blog)   
+
+《前端要给力之系列》是一系列非常有趣的文章，同时讲的非常深入
+[前端要给力之系列](/Entry/Geili.md)
 
 
 ---
@@ -93,8 +98,6 @@
 - js引擎的垃圾回收机制
 - Date.format实现过吗？思路是怎样的？
 - 动画：setTimeout何时执行，requestAnimationFrame的优点
-- parseQuery
-- flatten
 - require.js的实现原理，webpack的实现原理与loader的实现
 
 ---
@@ -105,8 +108,8 @@
 #### Browser
 
 - [打开一个网页经历了那些过程？](https://github.com/qiu-deqing/FE-interview#从浏览器地址栏输入url到显示页面的步骤以http为例)
-- [浏览器加载白屏是什么原因？](/WhiteScreen.md)
-- [千万访问量的项目，前端需要注意些什么？](/DozensOfVisits.md)
+- [浏览器加载白屏是什么原因？](/Collection/WhiteScreen.md)
+- [千万访问量的项目，前端需要注意些什么？](/Collection/DozensOfVisits.md)
 
 #### JavaScript语言理解
 这一章我们尽量带来较深层的JavaScript语言层次的问题，我们会拿出几个JavaScript较深入的点来讲。
@@ -128,19 +131,19 @@
 其他的待补充，先哄老婆睡觉了
 #### 其他
 
-- [实现eventbus(发布订阅/观察者模式)](/Events.md)
-- [继承（重点）](/Inherit.md)
-- [模版引擎](/Template.md)
-- [promise以及一些扩展](/Promise.md)
+- [实现events(发布订阅/观察者模式)](/Collection/Events.md)
+- [继承（重点）](/Collection/Inherit.md)
 - event loop [视频](https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be), [SPEC](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model)
 - [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
 - [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
 - [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
+- 函数防抖（debounce）和函数节流（throttle）是什么？有什么区别？
+- 函数记忆是什么？什么场景下使用？（动态规划）
 
 #### Function Program
-- [闭包（重点）](/Clojure.md)
-- [柯里化（Currying）](/Currying.md)
+- [闭包（重点）](/Collection/Clojure.md)
+- [柯里化（Currying）](/Collection/Currying.md)
 
 #### HTTP
 - http1.0和http1.1的区别
@@ -171,6 +174,23 @@
 - [移动端的缓存机制有哪几种？](https://segmentfault.com/a/1190000004132566)
 - 小程序如何与native通信？react-native实现原理？jsbridge如何实现？
 - 过万条数据如何加载和渲染？
+
+#### Whiteboard
+- parseQuery
+- flatten
+- [乱序算法（Fisher–Yates）](https://github.com/Liyuk/Interview-Questions-Answers/issues/1)
+- [模版引擎](/Collection/Template.md)
+- 棋盘最短路（动态规划）
+- 反转二叉树
+- 将两个有序数组合并成为一个有序数组
+- 双向链表寻找中间的元素，单向链表寻找中间的元素
+- 全选和单行选中的联动
+- 数组去重，考虑object、NaN、数字1，弱类型转换
+- bind
+- currying
+- 查找数组中第k大的数
+- 一个无重复元素的数组，求所有两数之和为k的组合
+- 变体题：一个无重复元素的数组，求元素和（元素个数小于n）为k的组合
 
 #### Command
 - shell/bash命令
@@ -210,10 +230,10 @@
 ## Team Management
 这部分内容更多是非技术方向上的一些杂谈，看看就好。
 ### Management
-- [给你一个二十人的新团队，你作为前端负责人你怎样去做？](/Team.md)
+- [给你一个二十人的新团队，你作为前端负责人你怎样去做？](/Teamwork/Team.md)
 ### Growing
-- [工程师的阶段是怎样的？不同阶段应该具备怎样的技能？](/Stages.md)
-- [我们为什么热爱学习](/Learning.md)
+- [工程师的阶段是怎样的？不同阶段应该具备怎样的技能？](/Teamwork/Stages.md)
+- [我们为什么热爱学习](/Teamwork/Learning.md)
 
 ---
 ## Foundation
