@@ -139,6 +139,7 @@
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
 - 函数防抖（debounce）和函数节流（throttle）是什么？有什么区别？
 - 函数记忆是什么？什么场景下使用？（动态规划）
+- 实现一个Lazyman [Answer 1](http://www.cnblogs.com/walls/p/6341614.html)  [Answer 2](http://web.jobbole.com/89626/)
 
 #### Function Program
 - [闭包（重点）](/Collection/Clojure.md)
