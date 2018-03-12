@@ -217,10 +217,11 @@
 - React-Native了解过吗？JavascriptCore是什么？
 
 #### Vue
-- Vue是如何设计响应式系统的？
+- [Vue是如何设计响应式系统的？（依赖收集）](https://zhuanlan.zhihu.com/p/29318017)
 - 什么时候使用computed, methods, watch？之间有什么样区别？
 - template 和 render(jsx) 有什么的联系？
 - this.$nextTick是如何设计的？
+- Vue 组件 data 为什么必须是函数？
 
 #### AngularJS
 尽管angularJS已经基本退出了历史舞台，但是详细有的同学还是做过相关的项目，并很有可能被面试官问起。
