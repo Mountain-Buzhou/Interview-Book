@@ -122,24 +122,23 @@
 - 词法作用域是什么？闭包是如何形成的？
 - var foo = function bar () {} 命名函数表达式中(上述的foo函数)bar变量是定义在哪一层作用域的？
 
-#### html
+#### html理解
 - 讲一下whatwg标准上的event loop规范。(别说你没看过
 - microTask的有哪些，Task的有哪些？（最好答出来所有的
 - 构思一下利用Task和microTask来完成框架层面的时间调度( 比如vue是如何利用microTask来实现batch update的
 - 讲一下你对web components的理解
+- web worker适合哪些场景
+- 如何在前端解析二进制，流媒体、图片二进制数据怎样渲染到页面上？
 
-其他的待补充，先哄老婆睡觉了
 #### 其他
-
 - [继承（重点）](/Collection/Inherit.md)
-- event loop [视频](https://www.youtube.com/watch?v=8aGhZQkoFbQ&feature=youtu.be), [SPEC](https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model)
 - [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
 - [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
 - [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
-- 函数防抖（debounce）和函数节流（throttle）是什么？有什么区别？
 - 函数记忆是什么？什么场景下使用？（动态规划）
 - 实现一个Lazyman [Answer 1](http://www.cnblogs.com/walls/p/6341614.html)  [Answer 2](http://web.jobbole.com/89626/)
+- 实现throttle和debounce (必会)
 
 #### Function Program
 - [闭包（重点）](/Collection/Clojure.md)
@@ -223,7 +222,7 @@
 - this.$nextTick是如何设计的？
 
 #### AngularJS
-尽管angularJS已经基本退出了历史舞台，但是详细有的同学还是做过相关的项目，并很有可能被面试官问起。
+尽管angularJS已经基本退出了历史舞台，但是相信有的同学还是做过相关的项目，并很有可能被面试官问起。
 - angularJS的数据绑定采用什么机制？详述原理
 - 如果通过angularJS的 directive/component 规划一套全组件化体系，可能遇到哪些挑战？
 - 一个angularJS应用应当如何良好地分层？
