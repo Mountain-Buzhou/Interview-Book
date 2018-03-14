@@ -205,14 +205,15 @@
 - React的生命周期mount和update描述下
 - [React的生命周期中的isBatchingUpdates了解吗？Transaction知道吗](https://zhuanlan.zhihu.com/p/20328570)
 - React的vdom如何实现？jsx是怎样解析的？
+- React的Fiber是什么？具有什么样的特性？
 - React的diff/patch算法原理
-- React的组件逻辑（受控、非受控）？如何搭建一个组件库
-- React的数据流，flux相关
-- Redux、Mobx、Rxjs，发布订阅模式、观察者模式
+- React的组件逻辑（受控、非受控）？如何设计一个组件库
+- React的数据流，Redux、Mobx、Rxjs，发布订阅模式、观察者模式，flux和no-flux
+- React的事件注册和事件分发知道吗？
 - Redux解决了什么痛点（有什么优点），又有什么缺点
-- Redux的中间件有哪些？redux-actions、redux-promise、redux-thunk、redux-saga、redux-immutable了解过哪些？说说差异   
+- Redux的中间件有哪些？redux-actions、redux-promise、redux-thunk、redux-saga、redux-immutable了解过哪些？说说中间件的意义
 - Redux有什么优化方案？
-- SSR了解过吗？怎样做？
+- SSR了解过吗？怎样做？了解Koa么？
 - React-Native了解过吗？JavascriptCore是什么？
 
 #### Vue
@@ -228,6 +229,15 @@
 - 如果通过angularJS的 directive/component 规划一套全组件化体系，可能遇到哪些挑战？
 - 一个angularJS应用应当如何良好地分层？
 - ng-click中写的表达式，能使用JS原生对象上的方法，比如Math.max之类的吗？为什么？
+
+#### Future
+一些关于未来的GUI编程以及可能存在的变化
+- web-assembly
+- pwa的优劣
+- new ui：VR、AR、speech
+- learning to learn
+- web operating system (web 3.0)
+- new html spec.
 
 ---
 ## Team Management
