@@ -236,7 +236,7 @@
 - new ui：VR、AR、speech
 - learning to learn
 - web operating system (web 3.0)
-- html new spec.
+- new html spec.
 
 ---
 ## Team Management
