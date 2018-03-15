@@ -11,19 +11,25 @@
             html, body {width: 100%}
             body {margin: 0px;}
             aside.toc { position:fixed; top:0px; left: 0px; width: 25%; border-right: 2px solid grey; overflow: scroll}
-            main { position: relative; width: 100%; left: 35%; margin-left: 25px; }
+            main { position: relative; width: 100%; left: 30%; margin-left: 25px; }
 
             .markdown-body {
                 box-sizing: border-box;
                 min-width: 200px;
                 max-width: 980px;
                 margin: 0 auto;
-                padding: 45px;
+                padding: 30px;
             }
         
             @media (max-width: 767px) {
                 .markdown-body {
                     padding: 15px;
+                }
+                aside.toc {
+                    display: none;
+                }
+                main {
+                    left: 0;
                 }
             }
         </style> 
