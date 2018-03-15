@@ -59,7 +59,6 @@
 
 这个模块分为三个部分，即基础`Basic`，进阶`Advanced`，框架`Framework`，这是相当科学的划分。这里的内容主要是我们一起整理，以及日常讨论的一些题目，会有一些重复的内容，也可以独立作为一个基础知识体系。
 
----
 ### Basic
 
 - html5新标签有哪些
@@ -108,7 +107,7 @@
 - Date.format实现过吗？思路是怎样的？
 - 动画：setTimeout何时执行，requestAnimationFrame的优点
 
----
+
 ### Advanced
 
 我们会尽可能地增加`Advanced`(进阶)这里面的题目的数量和难度，当然也包含很多基础知识点的详细内容。这里的知识点的区分暂时并不是特别明显，之后onion来整理这块儿内容。
@@ -179,6 +178,7 @@
 
 #### Products
 这里主要是一些生产中真实存在的问题。
+
 - 一个feed流，有哪些展现方式？如果当前页面可视区有5个格子，而你有20条信息需要展示，请问有哪些自动展示的算法？
 - [移动端的缓存机制有哪几种？](https://segmentfault.com/a/1190000004132566)
 - 小程序如何与native通信？react-native实现原理？jsbridge如何实现？
@@ -219,13 +219,13 @@
 - 找出数组中最大的两数之差
 
 #### System Design
-这类题目非常繁琐以及复杂，主要出现在高级工程师的最终面试里。对于不同层级的开发人员的回答要求各不相同，但有必要全局地了解整个系统的设计结构和基本概念。
+这类题目非常繁琐以及复杂，主要出现在高级工程师的最终面试里。对于不同层级的开发人员的回答要求各不相同，但有必要全局地了解整个系统的设计结构和基本概念。  
+
 - 请设计一个前端的组件库，包括组件的分类、具体的内容、API的规范、协作开发的规范。
 - [System Design Primer 中文](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
 - [System Design Interview](https://github.com/checkcheckzz/system-design-interview)
 
 
----
 ### Framework
 
 #### React
@@ -251,14 +251,16 @@
 - Vue 组件 data 为什么必须是函数？
 
 #### AngularJS
-尽管angularJS已经基本退出了历史舞台，但是相信有的同学还是做过相关的项目，并很有可能被面试官问起。
+尽管angularJS已经基本退出了历史舞台，但是相信有的同学还是做过相关的项目，并很有可能被面试官问起。  
+
 - angularJS的数据绑定采用什么机制？详述原理
 - 如果通过angularJS的 directive/component 规划一套全组件化体系，可能遇到哪些挑战？
 - 一个angularJS应用应当如何良好地分层？
 - ng-click中写的表达式，能使用JS原生对象上的方法，比如Math.max之类的吗？为什么？
 
 #### Future
-一些关于未来的GUI编程以及可能存在的变化
+一些关于未来的GUI编程以及可能存在的变化  
+
 - web-assembly
 - pwa的优劣
 - new ui：VR、AR、speech
@@ -267,8 +269,10 @@
 - new html spec.
 
 ---
+
 ## Team Management
-这部分内容更多是非技术方向上的一些杂谈，看看就好。
+这部分内容更多是非技术方向上的一些杂谈，看看就好。  
+
 ### Management
 - [给你一个二十人的新团队，你作为前端负责人你怎样去做？](/Teamwork/Team.md)
 ### Growing
