@@ -27,8 +27,8 @@ htmlTemplate = string.Template('''
         <link rel="stylesheet" href="assets/css/modest.css">
         <style>
             html, body {width: 100%}
-            body {margin: 0px;}
-            aside.toc { position:fixed; top:0px; left: 0px; width: ${asideWidth}%; border-right: 2px solid grey; overflow: scroll}
+            body {margin: 0px;padding: 0px;}
+            aside.toc { position:fixed; top:0px; left: 0px; width: ${asideWidth}%; border-right: 2px solid grey; overflow: scroll; background: #fefefe; z-index: 100;}
             main { position: relative; width: ${mainWidth}%; left: ${asideWidth2}%; margin-left: 25px; }
 
             .markdown-body {
@@ -48,6 +48,7 @@ htmlTemplate = string.Template('''
                 }
                 main {
                     left: 0;
+                    margin-left: 0;
                 }
             }
         </style> 
@@ -106,7 +107,7 @@ else:
         # or else md would not have attribute toc
         # 100-3 : 3 percent for margin 
         
-        html = htmlTemplate.substitute(asideWidth = args.asideWidth, asideWidth2 = args.asideWidth + 5, mainWidth = 100,
+        html = htmlTemplate.substitute(asideWidth = args.asideWidth, asideWidth2 = args.asideWidth + 10, mainWidth = 100,
             toc= md.toc, mainContent=mainContent) 
      
         outfile = open(fname[:-2]+'html', 'w')
