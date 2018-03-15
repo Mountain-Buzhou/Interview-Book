@@ -2,8 +2,7 @@
 
 `Author: @liyuk @onion`
 
-部分*.md超链接在html模式中失效，请移步仓库阅读`README.md`。   
-Github Repo: https://github.com/Liyuk/Interview-Questions-Answers
+**部分markdown超链接在html模式中失效，请移步仓库  [Github Repo: Interview-Questions-Answers](https://github.com/Liyuk/Interview-Questions-Answers)  阅读**
 
 ## Abstract
 网络上的资源其实已经足够多了，所以在进行搜索的时候需要极大的筛选成本。为了减少这种低效的筛选，我将一些零散的知识整理在一起。
@@ -26,7 +25,9 @@ Github Repo: https://github.com/Liyuk/Interview-Questions-Answers
 
 `Teamwork`这个部分则是关于团队管理、以及个人非技术上的一些发展相关的杂谈。
 
-`Foundation`这个部分是计算机基础的概念，包括计算机组成原理、操作系统、编译原理、计算机网络、数据结构与算法、数据库系统、软件工程。这个部分就是所谓的补基础，构建完整的计算机体系结构，是向上成长的过程中必不可少的。**对于这种资讯类的repo来说，很少有提及基础的重要性，希望能够引起阅读者的重视**。    
+`Foundation`这个部分是计算机基础的概念，包括计算机组成原理、操作系统、编译原理、计算机网络、数据结构与算法、数据库系统、软件工程。这个部分就是所谓的补基础，构建完整的计算机体系结构，是向上成长的过程中必不可少的。  
+
+**对于这种资讯类的repo来说，很少有提及基础的重要性，希望能够引起阅读者的重视**。    
 
 **欢迎大家在issue里留下自己的奇思妙想，或者直接pr。**   
 
@@ -39,6 +40,7 @@ Table of Contents
       * [Abstract](#abstract)
          * [Hortation](#hortation)
          * [Guidance](#guidance)
+   * [Table of Contents](#table-of-contents)
       * [Entry](#entry)
          * [Naive](#naive)
          * [Interesting](#interesting)
@@ -46,7 +48,7 @@ Table of Contents
          * [Basic](#basic)
          * [Advanced](#advanced)
             * [Browser](#browser)
-            * [JavaScript(#Javascript)](#javascriptjavascript)
+            * [JavaScript](#javascript)
             * [html](#html)
             * [Another](#another)
             * [Function Program](#function-program)
@@ -69,7 +71,6 @@ Table of Contents
          * [Network](#network)
          * [Algorithm](#algorithm)
          * [Compliers](#compliers)
-
 
 ---
 ## Entry
@@ -163,7 +164,7 @@ Table of Contents
 - [浏览器加载白屏是什么原因？](/Collection/WhiteScreen.md)
 - [千万访问量的项目，前端需要注意些什么？](/Collection/DozensOfVisits.md)
 
-#### JavaScript(#Javascript)
+#### JavaScript
 这一章我们尽量带来较深层的JavaScript语言层次的问题，我们会拿出几个JavaScript较深入的点来讲。
 
 - 表达式和语句有什么区别？如何把语句转换为表达式？

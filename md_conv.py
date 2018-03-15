@@ -24,19 +24,35 @@ htmlTemplate = string.Template('''
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Interview Questions & Answers</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <meta charset=utf-8>
+        <link rel="stylesheet" href="assets/css/modest.css">
         <style>
             html, body {width: 100%}
             body {margin: 0px;}
             aside.toc { position:fixed; top:0px; left: 0px; width: ${asideWidth}%; border-right: 2px solid grey; overflow: scroll}
-            main { position: relative; width: ${mainWidth}%; left: ${asideWidth}%; margin-left: 25px; }
-            ${css_for_header_number}
-        </style>
+            main { position: relative; width: ${mainWidth}%; left: ${asideWidth2}%; margin-left: 25px; }
+
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
+        
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style> 
     </head>
     <body>
-    <aside class="toc">$toc</aside>
-    <main>$mainContent</main>
+    <aside class="toc markdown-body">$toc</aside>
+    <main>
+        <article class="markdown-body">
+            $mainContent
+        </article>
+    </main>
     <script>
         var tocElem = document.querySelector("aside.toc");
         tocElem.style.setProperty("height", window.innerHeight+'px');
@@ -61,23 +77,6 @@ htmlTemplate = string.Template('''
     <body>
 ''')
 
-css_for_header_number = ''
-if not args.noNumber:
-    css_for_header_number = '''
-            body { counter-reset: h1counter}
-            h1 { counter-reset: h2counter}  /* cannot use the same counter as h2 is not the child of h1*/
-            h1::before {counter-increment: h1counter; content: counter(h1counter) " ";}
-            h2 { counter-reset: h3counter}
-            h2::before {counter-increment: h2counter; content: counter(h1counter) "." counter(h2counter) " "}
-            h3 { counter-reset: h4counter}
-            h3::before {counter-increment: h3counter; content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) " "}
-            h4::before {counter-increment: h4counter; content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) " "}
-            aside ul { counter-reset: section;  list-style-type: none; }
-            aside li::before { counter-increment: section; content: counters(section,".") " "; }
-            aside ul ul ul ul ul li::before {content: none}   /* number depth : 4 */
-        '''
-
-
 if (args.files[0] == '*'):
     files = filter(os.path.isfile, os.listdir(os.getcwd()))
     files = filter(lambda x: x.endswith('.md'), files)
@@ -101,8 +100,8 @@ else:
         # or else md would not have attribute toc
         # 100-3 : 3 percent for margin 
         
-        html = htmlTemplate.substitute(asideWidth = args.asideWidth, mainWidth =(100-3-args.asideWidth),
-            toc= md.toc, mainContent=mainContent, css_for_header_number=css_for_header_number) 
+        html = htmlTemplate.substitute(asideWidth = args.asideWidth, asideWidth2 = args.asideWidth + 10, mainWidth = 100,
+            toc= md.toc, mainContent=mainContent) 
      
         outfile = open(fname[:-2]+'html', 'w')
         outfile.write(html.encode('utf-8'))

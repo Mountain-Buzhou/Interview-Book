@@ -6,30 +6,30 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Interview Questions & Answers</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <meta charset=utf-8>
+        <link rel="stylesheet" href="assets/css/modest.css">
         <style>
             html, body {width: 100%}
             body {margin: 0px;}
             aside.toc { position:fixed; top:0px; left: 0px; width: 25%; border-right: 2px solid grey; overflow: scroll}
-            main { position: relative; width: 72%; left: 25%; margin-left: 25px; }
-            
-            body { counter-reset: h1counter}
-            h1 { counter-reset: h2counter}  /* cannot use the same counter as h2 is not the child of h1*/
-            h1::before {counter-increment: h1counter; content: counter(h1counter) " ";}
-            h2 { counter-reset: h3counter}
-            h2::before {counter-increment: h2counter; content: counter(h1counter) "." counter(h2counter) " "}
-            h3 { counter-reset: h4counter}
-            h3::before {counter-increment: h3counter; content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) " "}
-            h4::before {counter-increment: h4counter; content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) " "}
-            aside ul { counter-reset: section;  list-style-type: none; }
-            aside li::before { counter-increment: section; content: counters(section,".") " "; }
-            aside ul ul ul ul ul li::before {content: none}   /* number depth : 4 */
+            main { position: relative; width: 100%; left: 35%; margin-left: 25px; }
+
+            .markdown-body {
+                box-sizing: border-box;
+                min-width: 200px;
+                max-width: 980px;
+                margin: 0 auto;
+                padding: 45px;
+            }
         
-        </style>
+            @media (max-width: 767px) {
+                .markdown-body {
+                    padding: 15px;
+                }
+            }
+        </style> 
     </head>
     <body>
-    <aside class="toc"><div class="toc">
+    <aside class="toc markdown-body"><div class="toc">
 <ul>
 <li><a href="#interview-questions-answers">Interview-Questions-Answers</a><ul>
 <li><a href="#abstract">Abstract</a><ul>
@@ -49,7 +49,7 @@
 <li><a href="#basic">Basic</a></li>
 <li><a href="#advanced">Advanced</a><ul>
 <li><a href="#browser">Browser</a></li>
-<li><a href="#javascriptjavascript">JavaScript(#Javascript)</a></li>
+<li><a href="#javascript">JavaScript</a></li>
 <li><a href="#html">html</a></li>
 <li><a href="#another">Another</a></li>
 <li><a href="#function-program">Function Program</a></li>
@@ -87,10 +87,11 @@
 </ul>
 </div>
 </aside>
-    <main><h1 id="interview-questions-answers">Interview-Questions-Answers</h1>
+    <main>
+        <article class="markdown-body">
+            <h1 id="interview-questions-answers">Interview-Questions-Answers</h1>
 <p><code>Author: @liyuk @onion</code></p>
-<p>部分*.md超链接在html模式中失效，请移步仓库阅读<code>README.md</code>。 <br>
-Github Repo: https://github.com/Liyuk/Interview-Questions-Answers</p>
+<p><strong>部分markdown超链接在html模式中失效，请移步仓库  <a href="https://github.com/Liyuk/Interview-Questions-Answers">Github Repo: Interview-Questions-Answers</a>  阅读</strong></p>
 <h2 id="abstract">Abstract</h2>
 <p>网络上的资源其实已经足够多了，所以在进行搜索的时候需要极大的筛选成本。为了减少这种低效的筛选，我将一些零散的知识整理在一起。</p>
 <h3 id="hortation">Hortation</h3>
@@ -103,7 +104,8 @@ Github Repo: https://github.com/Liyuk/Interview-Questions-Answers</p>
 <p><code>Entry</code>这个部分是几个前端知识库的链接，里面的内容比较浅显易懂。先看看整个结构性的题目，找到自己的知识的盲区，再去针对性学习。</p>
 <p><code>Collection</code>来自日常的面试、闲聊和偶尔的突发奇想，主要是觉得比较有趣，所以有做一些记录和分类。我和onion讨论了下，决定把这个模块分为三个大的内容，基础、进阶、框架，以及一些我之前整理的问题（与<code>Entry</code>有所部分重复）。</p>
 <p><code>Teamwork</code>这个部分则是关于团队管理、以及个人非技术上的一些发展相关的杂谈。</p>
-<p><code>Foundation</code>这个部分是计算机基础的概念，包括计算机组成原理、操作系统、编译原理、计算机网络、数据结构与算法、数据库系统、软件工程。这个部分就是所谓的补基础，构建完整的计算机体系结构，是向上成长的过程中必不可少的。<strong>对于这种资讯类的repo来说，很少有提及基础的重要性，希望能够引起阅读者的重视</strong>。    </p>
+<p><code>Foundation</code>这个部分是计算机基础的概念，包括计算机组成原理、操作系统、编译原理、计算机网络、数据结构与算法、数据库系统、软件工程。这个部分就是所谓的补基础，构建完整的计算机体系结构，是向上成长的过程中必不可少的。  </p>
+<p><strong>对于这种资讯类的repo来说，很少有提及基础的重要性，希望能够引起阅读者的重视</strong>。    </p>
 <p><strong>欢迎大家在issue里留下自己的奇思妙想，或者直接pr。</strong>   </p>
 <hr>
 <h1 id="table-of-contents">Table of Contents</h1>
@@ -114,6 +116,9 @@ Github Repo: https://github.com/Liyuk/Interview-Questions-Answers</p>
 <li><a href="#guidance">Guidance</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#table-of-contents">Table of Contents</a><ul>
 <li><a href="#entry">Entry</a><ul>
 <li><a href="#naive">Naive</a></li>
 <li><a href="#interesting">Interesting</a></li>
@@ -123,7 +128,7 @@ Github Repo: https://github.com/Liyuk/Interview-Questions-Answers</p>
 <li><a href="#basic">Basic</a></li>
 <li><a href="#advanced">Advanced</a><ul>
 <li><a href="#browser">Browser</a></li>
-<li><a href="#javascriptjavascript">JavaScript(#Javascript)</a></li>
+<li><a href="#javascript">JavaScript</a></li>
 <li><a href="#html">html</a></li>
 <li><a href="#another">Another</a></li>
 <li><a href="#function-program">Function Program</a></li>
@@ -247,7 +252,7 @@ Github Repo: https://github.com/Liyuk/Interview-Questions-Answers</p>
 <li><a href="/Collection/WhiteScreen.md">浏览器加载白屏是什么原因？</a></li>
 <li><a href="/Collection/DozensOfVisits.md">千万访问量的项目，前端需要注意些什么？</a></li>
 </ul>
-<h4 id="javascriptjavascript">JavaScript(#Javascript)</h4>
+<h4 id="javascript">JavaScript</h4>
 <p>这一章我们尽量带来较深层的JavaScript语言层次的问题，我们会拿出几个JavaScript较深入的点来讲。</p>
 <ul>
 <li>表达式和语句有什么区别？如何把语句转换为表达式？</li>
@@ -469,7 +474,9 @@ Github Repo: https://github.com/Liyuk/Interview-Questions-Answers</p>
 <li>指令集并行性</li>
 <li>并行性与局部性优化</li>
 <li>过程间分析</li>
-</ul></main>
+</ul>
+        </article>
+    </main>
     <script>
         var tocElem = document.querySelector("aside.toc");
         tocElem.style.setProperty("height", window.innerHeight+'px');
