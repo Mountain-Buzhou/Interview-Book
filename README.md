@@ -176,7 +176,7 @@
 - 优化中会提到缓存的问题，问：静态资源或者接口等如何做缓存优化
 - 页面DOM节点太多，会出现什么问题？如何优化？
 
-#### Product
+#### Products
 这里主要是一些生产中真实存在的问题。
 - 一个feed流，有哪些展现方式？如果当前页面可视区有5个格子，而你有20条信息需要展示，请问有哪些自动展示的算法？
 - [移动端的缓存机制有哪几种？](https://segmentfault.com/a/1190000004132566)
@@ -193,8 +193,9 @@
 - echart这类图像库的实现原理？
 - i18n的国际化方案应该是怎样的？
 - 数据埋点的意义是什么？应当针对哪些数据进行埋点？如何构建一个埋点系统？
-- 小程序的实现原理是什么？小游戏的实现原理是什么？
-- mpvue这样h5转小程序的工具的原理是什么？怎样去实现？
+- 小程序的实现原理是什么？[这【五篇】文章将带你深入了解「微信小程序」](https://github.com/phodal/articles/issues/32)
+- 小游戏的实现原理是什么？[Cocos知乎文章：微信小游戏上手](https://www.zhihu.com/org/cocos-3/posts)、[深入理解使用白鹭引擎开发微信小游戏的构建机制](https://zhuanlan.zhihu.com/p/32749103)
+- mpvue这样h5转小程序的工具的原理是什么？怎样去实现？[官方宣传文档](https://zhuanlan.zhihu.com/p/34450979)、[如何看待美团开源mpvue](https://www.zhihu.com/question/268421668)
 
 #### Whiteboard
 - parseQuery
@@ -219,10 +220,9 @@
 #### System Design
 这类题目非常繁琐以及复杂，主要出现在高级工程师的最终面试里。对于不同层级的开发人员的回答要求各不相同，但有必要全局地了解整个系统的设计结构和基本概念。
 - 请设计一个前端的组件库，包括组件的分类、具体的内容、API的规范、协作开发的规范。
+- [System Design Primer 中文](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
+- [System Design Interview](https://github.com/checkcheckzz/system-design-interview)
 
-#### Command
-- shell/bash命令
-- git命令
 
 ---
 ### Framework
