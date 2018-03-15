@@ -20,6 +20,11 @@ htmlTemplate = string.Template('''
     <!DOCTYPE html>
     <html>
     <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Interview Questions & Answers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
     <meta charset=utf-8>
         <style>
             html, body {width: 100%}
@@ -59,18 +64,18 @@ htmlTemplate = string.Template('''
 css_for_header_number = ''
 if not args.noNumber:
     css_for_header_number = '''
-body { counter-reset: h1counter}
-    h1 { counter-reset: h2counter}  /* cannot use the same counter as h2 is not the child of h1*/
-    h1::before {counter-increment: h1counter; content: counter(h1counter) " ";}
-    h2 { counter-reset: h3counter}
-    h2::before {counter-increment: h2counter; content: counter(h1counter) "." counter(h2counter) " "}
-    h3 { counter-reset: h4counter}
-    h3::before {counter-increment: h3counter; content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) " "}
-    h4::before {counter-increment: h4counter; content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) " "}
-    aside ul { counter-reset: section;  list-style-type: none; }
-    aside li::before { counter-increment: section; content: counters(section,".") " "; }
-    aside ul ul ul ul ul li::before {content: none}   /* number depth : 4 */
-'''
+            body { counter-reset: h1counter}
+            h1 { counter-reset: h2counter}  /* cannot use the same counter as h2 is not the child of h1*/
+            h1::before {counter-increment: h1counter; content: counter(h1counter) " ";}
+            h2 { counter-reset: h3counter}
+            h2::before {counter-increment: h2counter; content: counter(h1counter) "." counter(h2counter) " "}
+            h3 { counter-reset: h4counter}
+            h3::before {counter-increment: h3counter; content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) " "}
+            h4::before {counter-increment: h4counter; content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) " "}
+            aside ul { counter-reset: section;  list-style-type: none; }
+            aside li::before { counter-increment: section; content: counters(section,".") " "; }
+            aside ul ul ul ul ul li::before {content: none}   /* number depth : 4 */
+        '''
 
 
 if (args.files[0] == '*'):

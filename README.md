@@ -2,6 +2,9 @@
 
 `Author: @liyuk @onion`
 
+部分*.md超链接在html模式中失效，请移步仓库阅读`README.md`。   
+Github Repo: https://github.com/Liyuk/Interview-Questions-Answers
+
 ## Abstract
 网络上的资源其实已经足够多了，所以在进行搜索的时候需要极大的筛选成本。为了减少这种低效的筛选，我将一些零散的知识整理在一起。
 
@@ -27,6 +30,48 @@
 
 **欢迎大家在issue里留下自己的奇思妙想，或者直接pr。**   
 
+---
+
+Table of Contents
+=================
+
+   * [Interview-Questions-Answers](#interview-questions-answers)
+      * [Abstract](#abstract)
+         * [Hortation](#hortation)
+         * [Guidance](#guidance)
+      * [Entry](#entry)
+         * [Naive](#naive)
+         * [Interesting](#interesting)
+      * [Collection](#collection)
+         * [Basic](#basic)
+         * [Advanced](#advanced)
+            * [Browser](#browser)
+            * [JavaScript(#Javascript)](#javascriptjavascript)
+            * [html](#html)
+            * [Another](#another)
+            * [Function Program](#function-program)
+            * [HTTP](#http)
+            * [Optimization](#optimization)
+            * [Products](#products)
+            * [Whiteboard](#whiteboard)
+            * [System Design](#system-design)
+         * [Framework](#framework)
+            * [React](#react)
+            * [Vue](#vue)
+            * [AngularJS](#angularjs)
+            * [Future](#future)
+      * [Team Management](#team-management)
+         * [Management](#management)
+         * [Growing](#growing)
+      * [Foundation](#foundation)
+         * [Operating System](#operating-system)
+         * [Computer Organization](#computer-organization)
+         * [Network](#network)
+         * [Algorithm](#algorithm)
+         * [Compliers](#compliers)
+
+
+---
 ## Entry
 
 我将**最基础**的前端的知识点分为三个部分：
@@ -118,7 +163,7 @@
 - [浏览器加载白屏是什么原因？](/Collection/WhiteScreen.md)
 - [千万访问量的项目，前端需要注意些什么？](/Collection/DozensOfVisits.md)
 
-#### JavaScript语言理解
+#### JavaScript(#Javascript)
 这一章我们尽量带来较深层的JavaScript语言层次的问题，我们会拿出几个JavaScript较深入的点来讲。
 
 - 表达式和语句有什么区别？如何把语句转换为表达式？
@@ -129,14 +174,14 @@
 - 词法作用域是什么？闭包是如何形成的？
 - var foo = function bar () {} 命名函数表达式中(上述的foo函数)bar变量是定义在哪一层作用域的？
 
-#### html理解
+#### html
 - 讲一下whatwg标准上的event loop规范。(别说你没看过
 - microTask的有哪些，Task的有哪些？（最好答出来所有的
 - 构思一下利用Task和microTask来完成框架层面的时间调度( 比如vue是如何利用microTask来实现batch update的
 - 讲一下你对web components的理解
 - web worker适合哪些场景
 
-#### 其他
+#### Another
 - [继承（重点）](/Collection/Inherit.md)
 - [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
 - [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
