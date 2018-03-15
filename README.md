@@ -2,7 +2,10 @@
 
 `Author: @liyuk @onion`
 
-**部分markdown超链接在html模式中失效，请移步仓库  [Github Repo: Interview-Questions-Answers](https://github.com/Liyuk/Interview-Questions-Answers)  阅读**
+代码仓库：[Github Repo: Interview-Questions-Answers](https://github.com/Liyuk/Interview-Questions-Answers)   
+更好的阅读体验：[Interview Questions Answers](https://liyuk.github.io/Interview-Questions-Answers/)  
+
+PS：部分markdown超链接在html模式中失效，请到仓库中README.md阅读，后期会修复
 
 ## Abstract
 网络上的资源其实已经足够多了，所以在进行搜索的时候需要极大的筛选成本。为了减少这种低效的筛选，我将一些零散的知识整理在一起。
