@@ -141,6 +141,7 @@
 - [继承（重点）](/Collection/Inherit.md)
 - [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
 - [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
+- [实现一个Promise](https://github.com/Liyuk/code-repertory/blob/master/promise/promise.js)
 - [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
 - 函数记忆是什么？什么场景下使用？（动态规划）
