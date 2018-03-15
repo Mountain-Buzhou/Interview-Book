@@ -107,7 +107,6 @@
 - js引擎的垃圾回收机制
 - Date.format实现过吗？思路是怎样的？
 - 动画：setTimeout何时执行，requestAnimationFrame的优点
-- require.js的实现原理，webpack的实现原理与loader的实现
 
 ---
 ### Advanced
@@ -148,6 +147,7 @@
 - 函数记忆是什么？什么场景下使用？（动态规划）
 - 实现一个Lazyman [Answer 1](http://www.cnblogs.com/walls/p/6341614.html)  [Answer 2](http://web.jobbole.com/89626/)
 - 实现throttle和debounce (必会)
+- require.js的实现原理，[webpack的实现原理与loader的实现](http://taobaofed.org/blog/2016/09/09/webpack-flow/)
 
 #### Function Program
 - [闭包（重点）](/Collection/Clojure.md)
