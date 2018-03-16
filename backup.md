@@ -4,7 +4,7 @@
 ```
 pip install markdown
 
-python md_conv.py --aside-width 25 README.md
+python md_conv.py README.md
 ```
 
 ### toc生成
