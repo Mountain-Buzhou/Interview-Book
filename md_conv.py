@@ -36,7 +36,7 @@ htmlTemplate = string.Template('''
             bottom: 0;
             z-index: 1;
             overflow-y: auto;
-            width: 300px;
+            width: 380px;
             color: #364149;
             background: #fafafa;
             border-right: 1px solid 
@@ -45,7 +45,7 @@ htmlTemplate = string.Template('''
             position: absolute;
             top: 0;
             right: 0;
-            left: 300px;
+            left: 380px;
             bottom: 0;
             overflow-y: auto;
             color: #000;
@@ -130,10 +130,14 @@ else:
         
         html = htmlTemplate.substitute(asideWidth = args.asideWidth, toc = md.toc, mainContent = mainContent) 
 
-        def replace(val) :
+        def replaceMd(val) :
             return 'https://github.com/Liyuk/Interview-Questions-Answers/blob/master' + val.group(0);
-            
-        html = re.sub(r'\/[\/\w]+.(md|jpeg|png)', replace, html)
+        
+        def replaceImg(val) : 
+            return 'https://raw.githubusercontent.com/Liyuk/Interview-Questions-Answers/master' + val.group(0);
+
+        html = re.sub(r'\/[\/\w]+.md', replaceMd, html)
+        html = re.sub(r'\/[\/\w]+.(jpeg|png)', replaceImg, html)
 
         outfile = open(fname[:-2]+'html', 'w')
         outfile.write(html.encode('utf-8'))
