@@ -1,3 +1,8 @@
+### tips
+
+因为项目过于简单，所以没有使用gitbook。   
+上传后如果需要gh-pages生效，请记得跑一遍python脚本生成html文件
+
 ### python
 将markdown生成html脚本
 
