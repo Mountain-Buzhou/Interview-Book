@@ -28,8 +28,28 @@ htmlTemplate = string.Template('''
         <style>
             html, body {width: 100%}
             body {margin: 0px;padding: 0px;}
-            aside.toc { position:fixed; top:0px; left: 0px; width: ${asideWidth}%; border-right: 2px solid grey; overflow: scroll; background: #fefefe; z-index: 100;}
-            main { position: relative; width: ${mainWidth}%; left: ${asideWidth2}%; margin-left: 25px; }
+            aside.toc {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                z-index: 1;
+                overflow-y: auto;
+                width: 300px;
+                color: #364149;
+                background: #fafafa;
+                border-right: 1px solid 
+            }
+            main {
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 300px;
+                bottom: 0;
+                overflow-y: auto;
+                color: #000;
+                background: #fff;
+            }
 
             .markdown-body {
                 box-sizing: border-box;
@@ -107,8 +127,7 @@ else:
         # or else md would not have attribute toc
         # 100-3 : 3 percent for margin 
         
-        html = htmlTemplate.substitute(asideWidth = args.asideWidth, asideWidth2 = args.asideWidth + 10, mainWidth = 100,
-            toc= md.toc, mainContent=mainContent) 
+        html = htmlTemplate.substitute(asideWidth = args.asideWidth, toc = md.toc, mainContent = mainContent) 
      
         outfile = open(fname[:-2]+'html', 'w')
         outfile.write(html.encode('utf-8'))
