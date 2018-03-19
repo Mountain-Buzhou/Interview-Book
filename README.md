@@ -101,6 +101,9 @@ Table of Contents
 《前端要给力之系列》是一系列非常有趣的文章，同时讲的非常深入
 >[前端要给力之系列](/Entry/Geili.md)
 
+如果你喜欢看一些函数式编程、编译原理之类的东西，那么可以看看何幻大神的知乎专栏进行一些初步的学习。
+>[业余程序员的个人修养](https://zhuanlan.zhihu.com/self-discipline)
+
 
 ---
 ## Collection
