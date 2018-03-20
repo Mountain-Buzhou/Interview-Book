@@ -165,7 +165,7 @@ Table of Contents
 
 #### Browser
 
-- [打开一个网页经历了那些过程？](https://github.com/qiu-deqing/FE-interview#从浏览器地址栏输入url到显示页面的步骤以http为例)
+- [打开一个网页经历了那些过程？](http://web.jobbole.com/94150/)
 - [浏览器加载白屏是什么原因？](/Collection/WhiteScreen.md)
 - [千万访问量的项目，前端需要注意些什么？](/Collection/DozensOfVisits.md)
 
