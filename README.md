@@ -127,6 +127,7 @@ Table of Contents
 - 圣杯、双飞燕布局
 - float清除浮动
 - flex布局、 grid布局、table布局
+- css以及中轴旋转、动画变换
 - 绘制三角形、矩形、菱形、梯形（奇巧淫技，可以不问）
 - spirte图（雪碧图）知道吗？svg雪碧图了解吗？
 - px、em、rem、vw、vh？rem的根节点样式在什么时候设置？
@@ -152,7 +153,6 @@ Table of Contents
 - let、const暂时性锁区知道吗？表现是怎样的？
 - 严格模式是什么？有什么好处？'use strict'
 - arguments是什么类型？callee和caller有什么区别？
-- 正则表达式规则？可以实现一个正则引擎吗？
 - js的内存泄漏是怎样产生的？
 - js引擎的垃圾回收机制
 - Date.format实现过吗？思路是怎样的？
@@ -196,8 +196,9 @@ Table of Contents
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
 - 函数记忆是什么？什么场景下使用？（动态规划）
 - 实现一个Lazyman [Answer 1](http://www.cnblogs.com/walls/p/6341614.html)  [Answer 2](http://web.jobbole.com/89626/)
-- 实现throttle和debounce (必会)
+- [实现throttle和debounce (必会)](https://jinlong.github.io/2016/04/24/Debouncing-and-Throttling-Explained-Through-Examples/)
 - require.js的实现原理，[webpack的实现原理与loader的实现](http://taobaofed.org/blog/2016/09/09/webpack-flow/)
+- [如何用正则表达式实现模板引擎？（正则表达式相关知识点）](http://louiszhai.github.io/2016/06/13/regexp/)
 
 #### Function Program
 - [闭包（重点）](/Collection/Clojure.md)
