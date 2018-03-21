@@ -198,6 +198,7 @@ Table of Contents
 - 实现一个Lazyman [Answer 1](http://www.cnblogs.com/walls/p/6341614.html)  [Answer 2](http://web.jobbole.com/89626/)
 - [实现throttle和debounce (必会)](https://jinlong.github.io/2016/04/24/Debouncing-and-Throttling-Explained-Through-Examples/)
 - require.js的实现原理，[webpack的实现原理与loader的实现](http://taobaofed.org/blog/2016/09/09/webpack-flow/)
+- [Babel是如何实现的](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md)
 - [如何用正则表达式实现模板引擎？（正则表达式相关知识点）](http://louiszhai.github.io/2016/06/13/regexp/)
 
 #### Function Program
