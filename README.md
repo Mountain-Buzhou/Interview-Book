@@ -62,6 +62,7 @@ Table of Contents
             * [React](#react)
             * [Vue](#vue)
             * [AngularJS](#angularjs)
+            * [Nodejs](#nodejs)
             * [Future](#future)
       * [Team Management](#team-management)
          * [Management](#management)
@@ -310,6 +311,10 @@ Table of Contents
 - 如果通过angularJS的 directive/component 规划一套全组件化体系，可能遇到哪些挑战？
 - 一个angularJS应用应当如何良好地分层？
 - ng-click中写的表达式，能使用JS原生对象上的方法，比如Math.max之类的吗？为什么？
+
+#### Nodejs
+
+- [node各种模块](https://github.com/parro-it/awesome-micro-npm-packages)
 
 #### Future
 一些关于未来的GUI编程以及可能存在的变化  
