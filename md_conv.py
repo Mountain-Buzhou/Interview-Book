@@ -139,7 +139,8 @@ else:
         html = re.sub(r'\/[\/\w]+.md', replaceMd, html)
         html = re.sub(r'\/[\/\w]+.(jpeg|png)', replaceImg, html)
 
-        outfile = open(fname[:-2]+'html', 'w')
+        # outfile = open(fname[:-2]+'html', 'w')
+        outfile = open('index.html', 'w')
         outfile.write(html.encode('utf-8'))
 
         print '>>>>> html factory mission complete!'
