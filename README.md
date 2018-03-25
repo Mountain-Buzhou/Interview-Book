@@ -45,6 +45,7 @@ Table of Contents
       * [Entry](#entry)
          * [Naive](#naive)
          * [Interesting](#interesting)
+         * [Recommend](#recommend)
       * [Collection](#collection)
          * [Basic](#basic)
          * [Advanced](#advanced)
