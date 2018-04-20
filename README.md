@@ -227,6 +227,7 @@ Table of Contents
 - http1.0和http1.1的区别
 - http请求码有哪些？206、302、303、304、307
 - 能说下304具体怎样实现吗？
+- http缓存逻辑是怎样的？协商缓存与强缓存？Last-Modified / Etag / Expires / Cache-Control ？
 - osi七层协议和tcp/ip四层协议
 - 三次握手和四次握手
 - 跨域是什么？http协议中如何判断跨域？如何解决跨域问题？
