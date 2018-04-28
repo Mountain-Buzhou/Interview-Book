@@ -1,7 +1,7 @@
 # Interview-Questions-Answers
 
 Contributors:
-[@liyuk](https://github.com/Liyuk) [@onion](https://github.com/dcy0701) [@heaven](https://github.com/NE-SmallTown) [@Tristan](https://github.com/Troland) [@张近东](https://github.com/q986171791)
+[@liyuk](https://github.com/Liyuk) [@onion](https://github.com/dcy0701) [@heaven](https://github.com/NE-SmallTown) [@Tristan](https://github.com/Troland) [@张庆东](https://github.com/q986171791)
 
 代码仓库：[Github Repo: Interview-Questions-Answers](https://github.com/Liyuk/Interview-Questions-Answers)   
 更好的阅读体验：[Interview Questions Answers](https://liyuk.github.io/Interview-Questions-Answers/)  
