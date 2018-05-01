@@ -169,8 +169,7 @@ Table of Contents
 - let、const暂时性锁区知道吗？表现是怎样的？
 - 严格模式是什么？有什么好处？'use strict'
 - arguments是什么类型？callee和caller有什么区别？
-- js的内存泄漏是怎样产生的？
-- js引擎的垃圾回收机制
+- [JavaScript 内存管理](https://github.com/Troland/how-javascript-works/blob/master/memory-management.md)
 - Date.format实现过吗？思路是怎样的？
 - 动画：setTimeout何时执行，requestAnimationFrame的优点
 
