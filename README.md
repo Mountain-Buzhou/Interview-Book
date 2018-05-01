@@ -52,8 +52,8 @@ Table of Contents
          * [Advanced](#advanced)
             * [Browser](#browser)
             * [JavaScript](#javascript)
+            * [Application](#application)
             * [HTML](#html)
-            * [Another](#another)
             * [Function Program](#function-program)
             * [HTTP](#http)
             * [Optimization](#optimization)
@@ -62,9 +62,9 @@ Table of Contents
             * [System Design](#system-design)
          * [Framework](#framework)
             * [React](#react)
-            * [Wheel](#wheel)
             * [Vue](#vue)
             * [AngularJS](#angularjs)
+            * [Wheel](#wheel)
             * [Nodejs](#nodejs)
             * [Future](#future)
       * [Team Management](#team-management)
@@ -169,7 +169,6 @@ Table of Contents
 - let、const暂时性锁区知道吗？表现是怎样的？
 - 严格模式是什么？有什么好处？'use strict'
 - arguments是什么类型？callee和caller有什么区别？
-- [JavaScript 内存管理](https://github.com/Troland/how-javascript-works/blob/master/memory-management.md)
 - Date.format实现过吗？思路是怎样的？
 - 动画：setTimeout何时执行，requestAnimationFrame的优点
 
@@ -197,17 +196,13 @@ Table of Contents
 - `(0, 1, 2)` 的结果是什么？
 -  `var foo = { value: 2, bar: function () { return this.value; }` 中`(foo.bar, foo.bar)()`的`this`值是什么？`(foo.bar = foo.bar)()`、`(false || foo.bar)()`呢?
 
-#### HTML
-- 讲一下whatwg标准上的event loop规范。(别说你没看过
-- microTask的有哪些，Task的有哪些？（最好答出来所有的
-- 构思一下利用Task和microTask来完成框架层面的时间调度( 比如vue是如何利用microTask来实现batch update的
-- 讲一下你对web components的理解
-- web worker适合哪些场景
+#### Application
+这里将JavaScript除去基本语言特性之外的东西整理出来，主要是JavaScript在工程上的应用场景，以及一些原理性问题。
 
-#### Another
 - [继承（重点）](/Collection/Inherit.md)
 - [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
 - [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
+- [JavaScript 内存管理](https://github.com/Troland/how-javascript-works/blob/master/memory-management.md)
 - [实现一个Promise](https://github.com/Liyuk/code-repertory/blob/master/promise/promise.js)
 - [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
@@ -217,6 +212,13 @@ Table of Contents
 - require.js的实现原理，[webpack的实现原理与loader的实现](http://taobaofed.org/blog/2016/09/09/webpack-flow/)
 - [Babel是如何实现的](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md)
 - [如何用正则表达式实现模板引擎？（正则表达式相关知识点）](http://louiszhai.github.io/2016/06/13/regexp/)
+
+#### HTML
+- 讲一下whatwg标准上的event loop规范。(别说你没看过
+- microTask的有哪些，Task的有哪些？（最好答出来所有的
+- 构思一下利用Task和microTask来完成框架层面的时间调度( 比如vue是如何利用microTask来实现batch update的
+- 讲一下你对web components的理解
+- web worker适合哪些场景
 
 #### Function Program
 - [闭包（重点）](/Collection/Clojure.md)
