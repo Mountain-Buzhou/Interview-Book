@@ -173,6 +173,8 @@ Table of Contents
 - Date.format实现过吗？思路是怎样的？
 - 动画：setTimeout何时执行，requestAnimationFrame的优点
 - 说说YSlow(可以详细一点)   
+- 你知道new一个对象有几步吗？(参考ES6标准文档)
+
 
 
 ### Advanced
@@ -243,7 +245,7 @@ Table of Contents
 - 首屏优化
 - 预加载资源、预解析DNS
 - 懒加载图片怎么做
-- iframe一般怎么使用？
+- [iframe一般怎么使用？](Collection/iframeUse.md)
 - window.onload、document.ready顺序？iframe会阻塞吗？
 - cdn是什么？如何查找最近的cdn？
 - gzip、chucked
