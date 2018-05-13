@@ -187,7 +187,7 @@ Table of Contents
 #### JavaScript
 这一章我们尽量带来较深层的JavaScript语言层次的问题，我们会拿出几个JavaScript较深入的点来讲。
 
-- 表达式和语句有什么区别？如何把语句转换为表达式？
+- [表达式和语句有什么区别？如何把语句转换为表达式？](Collection/ExpressionAndStatement.md)
 - 什么叫执行上下文栈(Execution Context Stack)? 一个函数调用会产生多少个上下文环境？如何激活一个上下文，什么叫caller(调用者)，什么叫callee(被调用者)？给你一段代码能否画出执行过程中的上下文堆栈变化？
 - 执行上下文包括哪些结构(状态/属性)，如何追踪关联代码的执行进度？
 - eval在调用的时候有哪些特别的地方？eval函数自身会产生上下文吗？会影响当前的调用上下文吗？
@@ -207,7 +207,7 @@ Table of Contents
 - [实现一个Promise](https://github.com/Liyuk/code-repertory/blob/master/promise/promise.js)
 - [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
-- 函数记忆是什么？什么场景下使用？（动态规划）
+- [函数记忆是什么？什么场景下使用？（动态规划）](Collection/memorization.md)
 - 实现一个Lazyman [Answer 1](http://www.cnblogs.com/walls/p/6341614.html)  [Answer 2](http://web.jobbole.com/89626/)
 - [实现throttle和debounce (必会)](https://jinlong.github.io/2016/04/24/Debouncing-and-Throttling-Explained-Through-Examples/)
 - require.js的实现原理，[webpack的实现原理与loader的实现](http://taobaofed.org/blog/2016/09/09/webpack-flow/)
