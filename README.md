@@ -307,7 +307,7 @@ Table of Contents
 - [System Design Primer 中文](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
 - [System Design Interview](https://github.com/checkcheckzz/system-design-interview)
 
-- [面试常问问题及问答思路](OftenAsked.md)
+- [面试常问问题及问答思路](Collection/OftenAsked.md)
 
 
 ### Framework

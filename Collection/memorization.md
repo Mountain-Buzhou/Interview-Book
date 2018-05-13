@@ -38,7 +38,7 @@ gcdmemo(85, 187) // => 17
 
 var gcdmemo = memorize(gcd);
 
-f=fcd(a,b);
+f=gcd(a,b);
 
 第一次调用时，cache为空对象。 gcdmemo为返回的匿名函数。
 
