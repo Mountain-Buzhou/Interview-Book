@@ -164,9 +164,9 @@ Table of Contents
 - GET、POST意义？restful架构下还有别的什么请求？OPTION请求是什么？
 - 事件冒泡和事件捕获是怎样的？对应的默认方法有什么？一般在什么情况使用？
 - call、apply、bind
-- 如何判断数据类型
+- 如何判断数据类型？
 - hoisting是什么？具体表现是怎样的？
-- 匿名函数是什么？函数表达式和函数声明的区别
+- 匿名函数是什么？函数表达式和函数声明的区别？
 - let、const暂时性锁区知道吗？表现是怎样的？
 - 严格模式是什么？有什么好处？'use strict'
 - arguments是什么类型？callee和caller有什么区别？
@@ -194,7 +194,7 @@ Table of Contents
 - 什么叫变量对象？什么叫活动对象？
 - 词法作用域是什么？闭包是如何形成的？
 - `var foo = function bar () {}` 命名函数表达式中(上述的foo函数)bar变量是定义在哪一层作用域的？
-- `(0, 1, 2)` 的结果是什么？
+- [`(0, 1, 2)` 的结果是什么？](Collection/NumberExpression.md)
 -  `var foo = { value: 2, bar: function () { return this.value; }` 中`(foo.bar, foo.bar)()`的`this`值是什么？`(foo.bar = foo.bar)()`、`(false || foo.bar)()`呢?
 
 #### Application
