@@ -146,7 +146,7 @@ Table of Contents
 - flex布局、 grid布局、table布局
 - css以及中轴旋转、动画变换
 - 绘制三角形、矩形、菱形、梯形（奇巧淫技，可以不问）
-- spirte图（雪碧图）知道吗？svg雪碧图了解吗？
+- [sprite图（雪碧图）知道吗？svg雪碧图了解吗？](Collection/sprite.md)
 - px、em、rem、vw、vh？rem的根节点样式在什么时候设置？
 - position有哪些？他们的定位原点是什么？
 - 媒体查询用css好还是用js好？
