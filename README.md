@@ -237,6 +237,7 @@ Table of Contents
 - http2具体内容？SDPY了解么？
 - HTTPS如何实现？tsl/ssl是什么？对称加密、非对称加密在什么时候、对什么数据加密？
 - DNS劫持是什么？
+- [浏览器在一次 HTTP 请求中，需要传输一个 4097 字节的文本数据给服务端，可以采用那些方式?](Collection/SendData.md)
 
 #### Optimization
 - 首屏优化
