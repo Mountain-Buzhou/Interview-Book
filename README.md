@@ -128,9 +128,10 @@ Table of Contents
 
 ### Basic
 
-- html5新标签有哪些
+- [html5新标签有哪些](Collection/NewHtmlTag.md)
 - canvas、svg、webGL
-- 语义化、SEO
+- [你是如何理解 HTML 语义化的，有什么好处](Collection/semantization.md)
+- [前端需要注意哪些SEO?](Collection/SEO.md)
 - manifest、worker、socket
 - input和textarea的区别
 - 用一个div模拟textarea的实现
@@ -149,7 +150,7 @@ Table of Contents
 - px、em、rem、vw、vh？rem的根节点样式在什么时候设置？
 - position有哪些？他们的定位原点是什么？
 - 媒体查询用css好还是用js好？
-- link和@import的区别？
+- [link和@import的区别？](Collection/LinkAndImport.md)
 - 响应式布局的原理
 - css低版本浏览器兼容问题，额外需要什么后缀来声明浏览器兼容
 - !important意义，是否应当规避使用？
@@ -304,6 +305,8 @@ Table of Contents
 - 请设计一个前端的组件库，包括组件的分类、具体的内容、API的规范、协作开发的规范。
 - [System Design Primer 中文](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
 - [System Design Interview](https://github.com/checkcheckzz/system-design-interview)
+
+- [面试常问问题及问答思路](OftenAsked.md)
 
 
 ### Framework
