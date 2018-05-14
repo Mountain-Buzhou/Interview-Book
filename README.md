@@ -128,9 +128,10 @@ Table of Contents
 
 ### Basic
 
-- html5新标签有哪些
+- [html5新标签有哪些](Collection/NewHtmlTag.md)
 - canvas、svg、webGL
-- 语义化、SEO
+- [你是如何理解 HTML 语义化的，有什么好处](Collection/semantization.md)
+- [前端需要注意哪些SEO?](Collection/SEO.md)
 - manifest、worker、socket
 - input和textarea的区别
 - 用一个div模拟textarea的实现
@@ -145,11 +146,11 @@ Table of Contents
 - flex布局、 grid布局、table布局
 - css以及中轴旋转、动画变换
 - 绘制三角形、矩形、菱形、梯形（奇巧淫技，可以不问）
-- spirte图（雪碧图）知道吗？svg雪碧图了解吗？
+- [sprite图（雪碧图）知道吗？svg雪碧图了解吗？](Collection/sprite.md)
 - px、em、rem、vw、vh？rem的根节点样式在什么时候设置？
 - position有哪些？他们的定位原点是什么？
 - 媒体查询用css好还是用js好？
-- link和@import的区别？
+- [link和@import的区别？](Collection/LinkAndImport.md)
 - 响应式布局的原理
 - css低版本浏览器兼容问题，额外需要什么后缀来声明浏览器兼容
 - !important意义，是否应当规避使用？
@@ -163,14 +164,17 @@ Table of Contents
 - GET、POST意义？restful架构下还有别的什么请求？OPTION请求是什么？
 - 事件冒泡和事件捕获是怎样的？对应的默认方法有什么？一般在什么情况使用？
 - call、apply、bind
-- 如何判断数据类型
+- 如何判断数据类型？
 - hoisting是什么？具体表现是怎样的？
-- 匿名函数是什么？函数表达式和函数声明的区别
+- 匿名函数是什么？函数表达式和函数声明的区别？
 - let、const暂时性锁区知道吗？表现是怎样的？
 - 严格模式是什么？有什么好处？'use strict'
 - arguments是什么类型？callee和caller有什么区别？
 - Date.format实现过吗？思路是怎样的？
 - 动画：setTimeout何时执行，requestAnimationFrame的优点
+- 说说YSlow(可以详细一点)   
+- 你知道new一个对象有几步吗？(参考ES6标准文档)
+
 
 
 ### Advanced
@@ -186,14 +190,14 @@ Table of Contents
 #### JavaScript
 这一章我们尽量带来较深层的JavaScript语言层次的问题，我们会拿出几个JavaScript较深入的点来讲。
 
-- 表达式和语句有什么区别？如何把语句转换为表达式？
+- [表达式和语句有什么区别？如何把语句转换为表达式？](Collection/ExpressionAndStatement.md)
 - 什么叫执行上下文栈(Execution Context Stack)? 一个函数调用会产生多少个上下文环境？如何激活一个上下文，什么叫caller(调用者)，什么叫callee(被调用者)？给你一段代码能否画出执行过程中的上下文堆栈变化？
 - 执行上下文包括哪些结构(状态/属性)，如何追踪关联代码的执行进度？
 - eval在调用的时候有哪些特别的地方？eval函数自身会产生上下文吗？会影响当前的调用上下文吗？
 - 什么叫变量对象？什么叫活动对象？
 - 词法作用域是什么？闭包是如何形成的？
 - `var foo = function bar () {}` 命名函数表达式中(上述的foo函数)bar变量是定义在哪一层作用域的？
-- `(0, 1, 2)` 的结果是什么？
+- [`(0, 1, 2)` 的结果是什么？](Collection/NumberExpression.md)
 -  `var foo = { value: 2, bar: function () { return this.value; }` 中`(foo.bar, foo.bar)()`的`this`值是什么？`(foo.bar = foo.bar)()`、`(false || foo.bar)()`呢?
 
 #### Application
@@ -206,7 +210,7 @@ Table of Contents
 - [实现一个Promise](https://github.com/Liyuk/code-repertory/blob/master/promise/promise.js)
 - [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
-- 函数记忆是什么？什么场景下使用？（动态规划）
+- [函数记忆是什么？什么场景下使用？（动态规划）](Collection/memorization.md)
 - 实现一个Lazyman [Answer 1](http://www.cnblogs.com/walls/p/6341614.html)  [Answer 2](http://web.jobbole.com/89626/)
 - [实现throttle和debounce (必会)](https://jinlong.github.io/2016/04/24/Debouncing-and-Throttling-Explained-Through-Examples/)
 - require.js的实现原理，[webpack的实现原理与loader的实现](http://taobaofed.org/blog/2016/09/09/webpack-flow/)
@@ -235,12 +239,13 @@ Table of Contents
 - http2具体内容？SDPY了解么？
 - HTTPS如何实现？tsl/ssl是什么？对称加密、非对称加密在什么时候、对什么数据加密？
 - DNS劫持是什么？
+- [浏览器在一次 HTTP 请求中，需要传输一个 4097 字节的文本数据给服务端，可以采用那些方式?](Collection/SendData.md)
 
 #### Optimization
 - 首屏优化
 - 预加载资源、预解析DNS
 - 懒加载图片怎么做
-- iframe一般怎么使用？
+- [iframe一般怎么使用？](Collection/iframeUse.md)
 - window.onload、document.ready顺序？iframe会阻塞吗？
 - cdn是什么？如何查找最近的cdn？
 - gzip、chucked
@@ -304,6 +309,8 @@ Table of Contents
 - 请设计一个前端的组件库，包括组件的分类、具体的内容、API的规范、协作开发的规范。
 - [System Design Primer 中文](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
 - [System Design Interview](https://github.com/checkcheckzz/system-design-interview)
+
+- [面试常问问题及问答思路](Collection/OftenAsked.md)
 
 
 ### Framework
