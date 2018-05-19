@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "deploy": "npm run build & cd docs/.vuepress/dist & git init & git add -A & git commit -m 'deploy' & git push -f git@github.com:Liyuk/Interview-Book.git master:master"
+    "build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
