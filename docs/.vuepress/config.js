@@ -36,6 +36,9 @@ module.exports = {
     },
     repo: 'https://github.com/Liyuk/Interview-Book',
     repoLabel: 'Github',
+    docsDir: 'docs',
+    // 假如文档放在一个特定的分支下：
+    docsBranch: 'vuepress',
     // 默认是 false, 设置为 true 来启用
     editLinks: true,
     // 默认为 "Edit this page"
