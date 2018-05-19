@@ -4,7 +4,7 @@
 
 `Author: @liyuk @cN @bailnl @菩提大叔 @史神`
 
-![团队管理](/assets/imgs/team.png)
+![团队管理](../assets/imgs/team.png)
 
 团队管理的核心是团队精神，并非是口号或者某种标注出来的东西，而是在日常的工作学习中积攒起来的团队的一种群体倾向。
 

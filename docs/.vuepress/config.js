@@ -8,7 +8,7 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@imgs': 'assets/imgs'
+        '@imgs': 'docs/assets/imgs'
       }
     }
   },
