@@ -1,6 +1,5 @@
-#! /bin/bash
-vuepress build docs
-cd docs/.vuepress/dist
+#! /bin/zsh
+cd dist
 git init
 git add -A
 git commit -m 'deploy'

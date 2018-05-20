@@ -1,17 +1,8 @@
 module.exports = {
   title: 'Interview Book',
   description: 'Just read it',
-  head: [
-    ['link', { rel: 'icon', href: '~@imgs/bone.png' }],
-  ],
+  dest: 'dist',
   base: '/Interview-Book/',
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@imgs': 'docs/assets/imgs'
-      }
-    }
-  },
   themeConfig: {
     nav: [
       { text: 'Guide', link: '/guide/' },
