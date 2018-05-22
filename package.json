@@ -1,5 +1,5 @@
 {
-  "name": "interview-questions-answers",
+  "name": "interview-book",
   "version": "1.0.0",
   "description": "interview book",
   "main": "index.js",
@@ -14,7 +14,9 @@
     "url": "git+https://github.com/Liyuk/Interview-Questions-Answers.git"
   },
   "keywords": [
-    "interview"
+    "interview",
+    "frontend",
+    "engineer"
   ],
   "author": "liyuk",
   "license": "ISC",
