@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Interview Book',
-  description: 'Just read it',
+  description: '前端面试题以及前端知识点梳理',
   dest: 'dist',
   base: '/Interview-Book/',
   themeConfig: {
