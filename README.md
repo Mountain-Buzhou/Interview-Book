@@ -1,10 +1,11 @@
-# Interview-Questions-Answers
+# Interview Book
 
-Contributors:
-[@liyuk](https://github.com/Liyuk) [@onion](https://github.com/dcy0701) [@heaven](https://github.com/NE-SmallTown) [@Tristan](https://github.com/Troland) [@张庆东](https://github.com/q986171791) [@moyu](https://github.com/moyuling)
+> Contributors:
+[@liyuk](https://github.com/Liyuk) [@onion](https://github.com/dcy0701) [@heaven](https://github.com/NE-SmallTown) [@Tristan](https://github.com/Troland) [@张庆东](https://github.com/q986171791) [@moyu](https://github.com/moyuling)  
 
-代码仓库：[Github Repo: Interview-Questions-Answers](https://github.com/Liyuk/Interview-Questions-Answers)   
-更好的阅读体验：[Interview Questions Answers](https://liyuk.github.io/Interview-Questions-Answers/)  
+> 更好的阅读体验：<https://mountain-buzhou.github.io/Interview-Book/>  
+
+> [**如何运行项目？如何贡献代码？**](https://github.com/Mountain-Buzhou/Interview-Book/issues/14)
 
 ## Abstract
 网络上的资源其实已经足够多了，所以在进行搜索的时候需要极大的筛选成本。为了减少这种低效的筛选，我将一些零散的知识整理在一起。
@@ -128,10 +129,10 @@ Table of Contents
 
 ### Basic
 
-- [html5新标签有哪些](Collection/NewHtmlTag.md)
+- [html5新标签有哪些](docs/Collection/NewHtmlTag.md)
 - canvas、svg、webGL
-- [你是如何理解 HTML 语义化的，有什么好处](Collection/semantization.md)
-- [前端需要注意哪些SEO?](Collection/SEO.md)
+- [你是如何理解 HTML 语义化的，有什么好处](docs/Collection/semantization.md)
+- [前端需要注意哪些SEO?](docs/Collection/SEO.md)
 - manifest、worker、socket
 - input和textarea的区别
 - 用一个div模拟textarea的实现
@@ -146,11 +147,11 @@ Table of Contents
 - flex布局、 grid布局、table布局
 - css以及中轴旋转、动画变换
 - 绘制三角形、矩形、菱形、梯形（奇巧淫技，可以不问）
-- [sprite图（雪碧图）知道吗？svg雪碧图了解吗？](Collection/sprite.md)
+- [sprite图（雪碧图）知道吗？svg雪碧图了解吗？](docs/Collection/sprite.md)
 - px、em、rem、vw、vh？rem的根节点样式在什么时候设置？
 - position有哪些？他们的定位原点是什么？
 - 媒体查询用css好还是用js好？
-- [link和@import的区别？](Collection/LinkAndImport.md)
+- [link和@import的区别？](docs/Collection/LinkAndImport.md)
 - 响应式布局的原理
 - css低版本浏览器兼容问题，额外需要什么后缀来声明浏览器兼容
 - !important意义，是否应当规避使用？
@@ -184,33 +185,33 @@ Table of Contents
 #### Browser
 
 - [打开一个网页经历了那些过程？](http://web.jobbole.com/94150/)
-- [浏览器加载白屏是什么原因？](/Collection/WhiteScreen.md)
-- [千万访问量的项目，前端需要注意些什么？](/Collection/DozensOfVisits.md)
+- [浏览器加载白屏是什么原因？](/docs/Collection/WhiteScreen.md)
+- [千万访问量的项目，前端需要注意些什么？](/docs/Collection/DozensOfVisits.md)
 
 #### JavaScript
 这一章我们尽量带来较深层的JavaScript语言层次的问题，我们会拿出几个JavaScript较深入的点来讲。
 
-- [表达式和语句有什么区别？如何把语句转换为表达式？](Collection/ExpressionAndStatement.md)
+- [表达式和语句有什么区别？如何把语句转换为表达式？](docs/Collection/ExpressionAndStatement.md)
 - 什么叫执行上下文栈(Execution Context Stack)? 一个函数调用会产生多少个上下文环境？如何激活一个上下文，什么叫caller(调用者)，什么叫callee(被调用者)？给你一段代码能否画出执行过程中的上下文堆栈变化？
 - 执行上下文包括哪些结构(状态/属性)，如何追踪关联代码的执行进度？
 - eval在调用的时候有哪些特别的地方？eval函数自身会产生上下文吗？会影响当前的调用上下文吗？
 - 什么叫变量对象？什么叫活动对象？
 - 词法作用域是什么？闭包是如何形成的？
 - `var foo = function bar () {}` 命名函数表达式中(上述的foo函数)bar变量是定义在哪一层作用域的？
-- [`(0, 1, 2)` 的结果是什么？](Collection/NumberExpression.md)
+- [`(0, 1, 2)` 的结果是什么？](docs/Collection/NumberExpression.md)
 -  `var foo = { value: 2, bar: function () { return this.value; }` 中`(foo.bar, foo.bar)()`的`this`值是什么？`(foo.bar = foo.bar)()`、`(false || foo.bar)()`呢?
 
 #### Application
 这里将JavaScript除去基本语言特性之外的东西整理出来，主要是JavaScript在工程上的应用场景，以及一些原理性问题。
 
-- [继承（重点）](/Collection/Inherit.md)
+- [继承（重点）](/docs/Collection/Inherit.md)
 - [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
 - [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
 - [JavaScript 内存管理](https://github.com/Troland/how-javascript-works/blob/master/memory-management.md)
 - [实现一个Promise](https://github.com/Liyuk/code-repertory/blob/master/promise/promise.js)
 - [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
-- [函数记忆是什么？什么场景下使用？（动态规划）](Collection/memorization.md)
+- [函数记忆是什么？什么场景下使用？（动态规划）](docs/Collection/memorization.md)
 - 实现一个Lazyman [Answer 1](http://www.cnblogs.com/walls/p/6341614.html)  [Answer 2](http://web.jobbole.com/89626/)
 - [实现throttle和debounce (必会)](https://jinlong.github.io/2016/04/24/Debouncing-and-Throttling-Explained-Through-Examples/)
 - require.js的实现原理，[webpack的实现原理与loader的实现](http://taobaofed.org/blog/2016/09/09/webpack-flow/)
@@ -225,8 +226,8 @@ Table of Contents
 - web worker适合哪些场景
 
 #### Function Program
-- [闭包（重点）](/Collection/Clojure.md)
-- [柯里化（Currying）](/Collection/Currying.md)
+- [闭包（重点）](/docs/Collection/Clojure.md)
+- [柯里化（Currying）](/docs/Collection/Currying.md)
 
 #### HTTP
 - http1.0和http1.1的区别
@@ -239,13 +240,13 @@ Table of Contents
 - http2具体内容？SDPY了解么？
 - HTTPS如何实现？tsl/ssl是什么？对称加密、非对称加密在什么时候、对什么数据加密？
 - DNS劫持是什么？
-- [浏览器在一次 HTTP 请求中，需要传输一个 4097 字节的文本数据给服务端，可以采用那些方式?](Collection/SendData.md)
+- [浏览器在一次 HTTP 请求中，需要传输一个 4097 字节的文本数据给服务端，可以采用那些方式?](docs/Collection/SendData.md)
 
 #### Optimization
 - 首屏优化
 - 预加载资源、预解析DNS
 - 懒加载图片怎么做
-- [iframe一般怎么使用？](Collection/iframeUse.md)
+- [iframe一般怎么使用？](docs/Collection/iframeUse.md)
 - window.onload、document.ready顺序？iframe会阻塞吗？
 - cdn是什么？如何查找最近的cdn？
 - gzip、chucked
@@ -284,7 +285,7 @@ Table of Contents
 - parseQuery
 - flatten
 - [乱序算法（Fisher–Yates）](https://github.com/Liyuk/Interview-Questions-Answers/issues/1)
-- [模版引擎](/Collection/Template.md)
+- [模版引擎](/docs/Collection/Template.md)
 - 反转二叉树
 - 将两个有序数组合并成为一个有序数组
 - 全选和单行选中的联动
@@ -294,7 +295,7 @@ Table of Contents
 - currying
 - 一个无重复元素的数组，求所有两数之和为k的组合
 - 变体题：一个无重复元素的数组，求元素和（元素个数小于n）为k的组合
-- [实现events(发布订阅/观察者模式)](/Collection/Events.md)
+- [实现events(发布订阅/观察者模式)](/docs/Collection/Events.md)
 - 找出数组中最大的两数之差
 - 棋盘最短路：动态规划、搜索+剪枝、时间优化、空间优化
 - 二叉树遍历：前序、后序、中序，时间复杂度，空间复杂度O(1)，递归非递归
@@ -310,7 +311,7 @@ Table of Contents
 - [System Design Primer 中文](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
 - [System Design Interview](https://github.com/checkcheckzz/system-design-interview)
 
-- [面试常问问题及问答思路](Collection/OftenAsked.md)
+- [面试常问问题及问答思路](docs/Collection/OftenAsked.md)
 
 
 ### Framework
@@ -377,9 +378,9 @@ Table of Contents
 这部分内容更多是非技术方向上的一些杂谈，看看就好。  
 
 ### Management
-- [给你一个二十人的新团队，你作为前端负责人你怎样去做？](/Teamwork/Team.md)
+- [给你一个二十人的新团队，你作为前端负责人你怎样去做？](docs/team/Team.md)
 ### Growing
-- [工程师的阶段是怎样的？不同阶段应该具备怎样的技能？](/Teamwork/Stages.md)
+- [工程师的阶段是怎样的？不同阶段应该具备怎样的技能？](docs/team/Stages.md)
 
 ---
 ## Foundation
@@ -387,7 +388,7 @@ Table of Contents
 
 我省略了《软件工程》与《数据库系统》的内容，因为前者方法论适合实践总结，后者我还不太熟悉。我推荐一本《计算机程序的构造和解释（SICP）》，是MIT本科的第一门课，讲述如何构造和分析复杂系统（程序）。这些书我自己也定期的回顾，之前与大佬讨论，不论科班还是非科班出身，不断回顾并思考计算机基础的东西，是非常重要的。  
 
-![基础书籍](/assets/imgs/books.jpeg)
+![基础书籍](docs/assets/imgs/books.jpeg)
 
 ### Operating System
 - 进程与线程

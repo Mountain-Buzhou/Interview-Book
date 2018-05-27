@@ -1,0 +1,30 @@
+{
+  "name": "interview-book",
+  "version": "1.0.0",
+  "description": "interview book",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "zsh deploy.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Liyuk/Interview-Questions-Answers.git"
+  },
+  "keywords": [
+    "interview",
+    "frontend",
+    "engineer"
+  ],
+  "author": "liyuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Liyuk/Interview-Questions-Answers/issues"
+  },
+  "homepage": "https://github.com/Liyuk/Interview-Questions-Answers#readme",
+  "devDependencies": {
+    "vuepress": "^0.8.4"
+  }
+}
