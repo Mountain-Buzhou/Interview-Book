@@ -196,7 +196,7 @@ Table of Contents
 - 执行上下文包括哪些结构(状态/属性)，如何追踪关联代码的执行进度？
 - eval在调用的时候有哪些特别的地方？eval函数自身会产生上下文吗？会影响当前的调用上下文吗？
 - 什么叫变量对象？什么叫活动对象？
-- 词法作用域是什么？闭包是如何形成的？
+- [词法作用域是什么？闭包是如何形成的？](docs/Collection/closure_moyu.md)
 - `var foo = function bar () {}` 命名函数表达式中(上述的foo函数)bar变量是定义在哪一层作用域的？
 - [`(0, 1, 2)` 的结果是什么？](docs/Collection/NumberExpression.md)
 -  `var foo = { value: 2, bar: function () { return this.value; }` 中`(foo.bar, foo.bar)()`的`this`值是什么？`(foo.bar = foo.bar)()`、`(false || foo.bar)()`呢?
