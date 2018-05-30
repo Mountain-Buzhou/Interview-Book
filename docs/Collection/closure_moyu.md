@@ -180,7 +180,7 @@ res();//"魔芋 你好~"
 
 
 
-![1527622788167](../../../moyu-note/JavaScript/submenu/closure.assets/1527622788167.png)
+![1527622788167](../../../moyu-note/JavaScript/submenu/closure_moyu.assets/1527622788167.png)
 
 
 
@@ -402,7 +402,7 @@ sub();
 
 ```
 
-![1527656311145](../../../moyu-note/JavaScript/submenu/closure.assets/1527656311145.png)
+![1527656311145](../../../moyu-note/JavaScript/submenu/closure_moyu.assets/1527656311145.png)
 
 
 
@@ -470,7 +470,7 @@ for(var i = 1; i < 10; i ++){
 
 结果为1秒后的9个10。
 
-![1527656577721](../../../moyu-note/JavaScript/submenu/closure.assets/1527656577721.png)
+![1527656577721](../../../moyu-note/JavaScript/submenu/closure_moyu.assets/1527656577721.png)
 
 魔芋解析：for循环结束后，`i`值为10，在任务队列中加入9个定时器。1秒后，调用闭包函数，此时闭包函数在作用域中使用`i`值。
 
@@ -495,7 +495,7 @@ for (var i = 1; i < 10; i++) {
 
 结果，每隔1秒，依次的输出1到9。
 
-![1527657051063](../../../moyu-note/JavaScript/submenu/closure.assets/1527657051063.png)
+![1527657051063](../../../moyu-note/JavaScript/submenu/closure_moyu.assets/1527657051063.png)
 
 魔芋解析：在for循环中，每次调用匿名自执行函数。定时器中的闭包函数使用的是传递进来的for的`i`值（1-9）。
 
@@ -520,7 +520,7 @@ for (var i = 1; i < 10; i++) {
 
 结果：每隔1秒输出10。进行9次。
 
-![1527657323488](../../../moyu-note/JavaScript/submenu/closure.assets/1527657323488.png)
+![1527657323488](../../../moyu-note/JavaScript/submenu/closure_moyu.assets/1527657323488.png)
 
 
 
@@ -547,7 +547,7 @@ for (var i = 1; i < 10; i++) {
 
 依次输出9个undefined。
 
-![1527657728413](../../../moyu-note/JavaScript/submenu/closure.assets/1527657728413.png)
+![1527657728413](../../../moyu-note/JavaScript/submenu/closure_moyu.assets/1527657728413.png)
 
 
 
