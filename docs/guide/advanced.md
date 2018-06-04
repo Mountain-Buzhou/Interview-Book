@@ -5,33 +5,33 @@
 ## Browser
 
 - [打开一个网页经历了那些过程？](http://web.jobbole.com/94150/)
-- [浏览器加载白屏是什么原因？](/collection/WhiteScreen.md)
-- [千万访问量的项目，前端需要注意些什么？](/collection/DozensOfVisits.md)
+- [浏览器加载白屏是什么原因？](/Collection/WhiteScreen.md)
+- [千万访问量的项目，前端需要注意些什么？](/Collection/DozensOfVisits.md)
 
 ## JavaScript
 这一章我们尽量带来较深层的JavaScript语言层次的问题，我们会拿出几个JavaScript较深入的点来讲。
 
-- [表达式和语句有什么区别？如何把语句转换为表达式？](/collection/ExpressionAndStatement.md)
+- [表达式和语句有什么区别？如何把语句转换为表达式？](/Collection/ExpressionAndStatement.md)
 - 什么叫执行上下文栈(Execution Context Stack)? 一个函数调用会产生多少个上下文环境？如何激活一个上下文，什么叫caller(调用者)，什么叫callee(被调用者)？给你一段代码能否画出执行过程中的上下文堆栈变化？
 - 执行上下文包括哪些结构(状态/属性)，如何追踪关联代码的执行进度？
 - eval在调用的时候有哪些特别的地方？eval函数自身会产生上下文吗？会影响当前的调用上下文吗？
 - 什么叫变量对象？什么叫活动对象？
-- 词法作用域是什么？闭包是如何形成的？
+- [词法作用域是什么？闭包是如何形成的？](/Collection/closure_moyu.md)
 - `var foo = function bar () {}` 命名函数表达式中(上述的foo函数)bar变量是定义在哪一层作用域的？
-- [`(0, 1, 2)` 的结果是什么？](/collection/NumberExpression.md)
+- [`(0, 1, 2)` 的结果是什么？](/Collection/NumberExpression.md)
 -  `var foo = { value: 2, bar: function () { return this.value; }` 中`(foo.bar, foo.bar)()`的`this`值是什么？`(foo.bar = foo.bar)()`、`(false || foo.bar)()`呢?
 
 ## Application
 这里将JavaScript除去基本语言特性之外的东西整理出来，主要是JavaScript在工程上的应用场景，以及一些原理性问题。
 
-- [继承（重点）](/collection/Inherit.md)
+- [继承（重点）](/Collection/Inherit.md)
 - [异步（重点）](https://blog.risingstack.com/writing-a-javascript-framework-execution-timing-beyond-settimeout/ )
 - [new操作符做了什么](http://blog.csdn.net/aimingoo/article/details/6105048)
 - [JavaScript 内存管理](https://github.com/Troland/how-javascript-works/blob/master/memory-management.md)
 - [实现一个Promise](https://github.com/Liyuk/code-repertory/blob/master/promise/promise.js)
 - [js模块化现状？AMD和CMD是什么？](https://segmentfault.com/a/1190000009591055)
 - 如何在前端解析二进制？流媒体、图片二进制数据怎样渲染到页面上？
-- [函数记忆是什么？什么场景下使用？（动态规划）](/collection/memorization.md)
+- [函数记忆是什么？什么场景下使用？（动态规划）](/Collection/memorization.md)
 - 实现一个Lazyman [Answer 1](http://www.cnblogs.com/walls/p/6341614.html)  [Answer 2](http://web.jobbole.com/89626/)
 - [实现throttle和debounce (必会)](https://jinlong.github.io/2016/04/24/Debouncing-and-Throttling-Explained-Through-Examples/)
 - require.js的实现原理，[webpack的实现原理与loader的实现](http://taobaofed.org/blog/2016/09/09/webpack-flow/)
@@ -47,8 +47,8 @@
 - web worker适合哪些场景
 
 ## Function Program
-- [闭包（重点）](/collection/Clojure.md)
-- [柯里化（Currying）](/collection/Currying.md)
+- [闭包（重点）](/Collection/Clojure.md)
+- [柯里化（Currying）](/Collection/Currying.md)
 
 ## HTTP
 - http1.0和http1.1的区别
@@ -61,13 +61,13 @@
 - http2具体内容？SDPY了解么？
 - HTTPS如何实现？tsl/ssl是什么？对称加密、非对称加密在什么时候、对什么数据加密？
 - DNS劫持是什么？
-- [浏览器在一次 HTTP 请求中，需要传输一个 4097 字节的文本数据给服务端，可以采用那些方式?](/collection/SendData.md)
+- [浏览器在一次 HTTP 请求中，需要传输一个 4097 字节的文本数据给服务端，可以采用那些方式?](/Collection/SendData.md)
 
 ## Optimization
 - 首屏优化
 - 预加载资源、预解析DNS
 - 懒加载图片怎么做
-- [iframe一般怎么使用？](/collection/iframeUse.md)
+- [iframe一般怎么使用？](/Collection/iframeUse.md)
 - window.onload、document.ready顺序？iframe会阻塞吗？
 - cdn是什么？如何查找最近的cdn？
 - gzip、chucked
@@ -106,7 +106,7 @@
 - parseQuery
 - flatten
 - [乱序算法（Fisher–Yates）](https://github.com/Liyuk/Interview-Questions-Answers/issues/1)
-- [模版引擎](/collection/Template.md)
+- [模版引擎](/Collection/Template.md)
 - 反转二叉树
 - 将两个有序数组合并成为一个有序数组
 - 全选和单行选中的联动
@@ -116,7 +116,7 @@
 - currying
 - 一个无重复元素的数组，求所有两数之和为k的组合
 - 变体题：一个无重复元素的数组，求元素和（元素个数小于n）为k的组合
-- [实现events(发布订阅/观察者模式)](/collection/Events.md)
+- [实现events(发布订阅/观察者模式)](/Collection/Events.md)
 - 找出数组中最大的两数之差
 - 棋盘最短路：动态规划、搜索+剪枝、时间优化、空间优化
 - 二叉树遍历：前序、后序、中序，时间复杂度，空间复杂度O(1)，递归非递归
@@ -132,5 +132,5 @@
 - [System Design Primer 中文](https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md)
 - [System Design Interview](https://github.com/checkcheckzz/system-design-interview)
 
-- [面试常问问题及问答思路](/collection/OftenAsked.md)
+- [面试常问问题及问答思路](/Collection/OftenAsked.md)
 
