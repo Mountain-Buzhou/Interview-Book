@@ -25,7 +25,7 @@ module.exports = {
         }
       ]
     },
-    repo: 'https://github.com/Liyuk/Interview-Book',
+    repo: 'https://github.com/Mountain-Buzhou/Interview-Book',
     repoLabel: 'Github',
     docsDir: 'docs',
     // 假如文档放在一个特定的分支下：

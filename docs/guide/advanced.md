@@ -105,7 +105,7 @@
 
 - parseQuery
 - flatten
-- [乱序算法（Fisher–Yates）](https://github.com/Liyuk/Interview-Questions-Answers/issues/1)
+- [乱序算法（Fisher–Yates）](https://github.com/Mountain-Buzhou/Interview-Book/issues/1)
 - [模版引擎](/Collection/Template.md)
 - 反转二叉树
 - 将两个有序数组合并成为一个有序数组
