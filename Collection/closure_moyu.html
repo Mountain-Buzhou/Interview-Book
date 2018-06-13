@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Interview Book | 闭包之魔芋理解</title>
+    <meta name="description" content="前端面试题以及前端知识点梳理">
+    
+    
+    <link rel="preload" href="/Interview-Book/assets/css/31.styles.abdfda26.css" as="style"><link rel="preload" href="/Interview-Book/assets/js/app.5bb2cac5.js" as="script"><link rel="preload" href="/Interview-Book/assets/js/15.73cb8c19.js" as="script"><link rel="prefetch" href="/Interview-Book/assets/js/0.fa55fd76.js"><link rel="prefetch" href="/Interview-Book/assets/js/1.42f91184.js"><link rel="prefetch" href="/Interview-Book/assets/js/2.855ab1b4.js"><link rel="prefetch" href="/Interview-Book/assets/js/3.e8fce265.js"><link rel="prefetch" href="/Interview-Book/assets/js/4.08e14bbe.js"><link rel="prefetch" href="/Interview-Book/assets/js/5.b4aca0a2.js"><link rel="prefetch" href="/Interview-Book/assets/js/6.48e246c3.js"><link rel="prefetch" href="/Interview-Book/assets/js/7.314c79e2.js"><link rel="prefetch" href="/Interview-Book/assets/js/8.a4751570.js"><link rel="prefetch" href="/Interview-Book/assets/js/9.34beea8b.js"><link rel="prefetch" href="/Interview-Book/assets/js/10.9a71a14d.js"><link rel="prefetch" href="/Interview-Book/assets/js/11.a9794c03.js"><link rel="prefetch" href="/Interview-Book/assets/js/12.74576756.js"><link rel="prefetch" href="/Interview-Book/assets/js/13.3a140532.js"><link rel="prefetch" href="/Interview-Book/assets/js/14.860bd71a.js"><link rel="prefetch" href="/Interview-Book/assets/js/16.74524187.js"><link rel="prefetch" href="/Interview-Book/assets/js/17.449fcfbc.js"><link rel="prefetch" href="/Interview-Book/assets/js/18.8d02e026.js"><link rel="prefetch" href="/Interview-Book/assets/js/19.809df8fe.js"><link rel="prefetch" href="/Interview-Book/assets/js/20.6d3cb1ce.js"><link rel="prefetch" href="/Interview-Book/assets/js/21.4b33f39f.js"><link rel="prefetch" href="/Interview-Book/assets/js/22.5b526472.js"><link rel="prefetch" href="/Interview-Book/assets/js/23.116cfae7.js"><link rel="prefetch" href="/Interview-Book/assets/js/24.06f1e64c.js"><link rel="prefetch" href="/Interview-Book/assets/js/25.dc8aafae.js"><link rel="prefetch" href="/Interview-Book/assets/js/26.3bb6309e.js"><link rel="prefetch" href="/Interview-Book/assets/js/27.56fb8f90.js"><link rel="prefetch" href="/Interview-Book/assets/js/28.16962525.js"><link rel="prefetch" href="/Interview-Book/assets/js/29.4cda0dc1.js"><link rel="prefetch" href="/Interview-Book/assets/js/30.53cbda7e.js">
+    <link rel="stylesheet" href="/Interview-Book/assets/css/31.styles.abdfda26.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/Interview-Book/" class="home-link router-link-active"><!----><span class="site-name">
+      Interview Book
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/Interview-Book/guide/" class="nav-link">Guide</a></div><a href="https://github.com/Mountain-Buzhou/Interview-Book" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Interview-Book/guide/" class="nav-link">Guide</a></div><a href="https://github.com/Mountain-Buzhou/Interview-Book" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><!----></div><div class="page"><div class="content"><h1 id="闭包之魔芋理解"><a href="#闭包之魔芋理解" aria-hidden="true" class="header-anchor">#</a> 闭包之魔芋理解</h1><p><code>Author: @魔芋</code></p><p>纯属个人理解，可能存在错误。欢迎指教。</p><h3 id="【魔芋】概念解释："><a href="#【魔芋】概念解释：" aria-hidden="true" class="header-anchor">#</a> 【魔芋】概念解释：</h3><p>01，在一个函数内声明一个函数，形成了嵌套函数。此时，外边的函数称为外部函数。内部的称为内部函数。或称为父函数和子函数。</p><p>02，闭包wiki:<a href="https://en.wikipedia.org/wiki/Closure_%28computer_programming" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Closure_(computer_programming</a></p><p>03，JS采用词法作用域（lexical scoping），函数的执行依赖于函数作用域，这个作用域是在函数定义时决定的，而不是函数调用时决定的。</p><ul><li>词法作用域：词法作用域也叫静态作用域，是指作用域在词法解析阶段就已经确定了，不会改变。</li><li>动态作用域：是指作用域在运行时才能确定。</li></ul><p>参看下面的例子，引自<a href="https://www.zhihu.com/question/20032419/answer/13742892" target="_blank" rel="noopener noreferrer">杨志的回答</a></p><pre class="language-text"><code>var foo=1;
+
+function static(){
+    alert(foo);
+}
+
+!function(){
+    var foo=2;
+    static();
+
+}();
+</code></pre><p>在js中，会弹出1而非2，因为static的scope在创建时，记录的foo是1。
+如果js是动态作用域，那么他应该弹出2</p><p>04，魔芋：识别闭包，在词法分析阶段已经确定了。</p><p>当外部函数运行的时候，一个闭包就形成了，他由内部函数的代码以及任何内部函数中指向外部函数局部变量的引用组成。</p><hr><h3 id="【q】函数第一次被调用时，会发生什么？"><a href="#【q】函数第一次被调用时，会发生什么？" aria-hidden="true" class="header-anchor">#</a> 【Q】函数第一次被调用时，会发生什么？</h3><p>当函数第一次被调用时，会创建一个执行环境（execution context）及相应的作用域链，并把作用域链赋值给一个特殊的内部属性（即<code>[[Scope]]</code>）。</p><p>然后，使用<code>this</code>、<code>arguments</code>和其他参数来初始化函数的活动对象（activation object）。</p><p>在作用域链中，内部函数的活动对象出于第一位，外部函数的活动对象始终处于第二位，外部函数的外部函数的活动对象处于第三位，……直至作为作用域链终点的全局执行环境。</p><p>每次调用JS函数时，会为之创建一个新的对象来保存所有的局部变量（函数定义的变量，函数参数。），把这个对象添加到作用域链中。函数体内部的变量都保存在函数作用域内。</p><p>我们将作用域链看做一个对象列表，而不是一个栈。（魔芋：栈是一种线性表，仅允许在表的一端进行插入和删除运算。）</p><p>当函数返回的时候，就从作用域链中将这个绑定变量的对象删除。</p><p>如果这个函数不存在嵌套的函数，也没有其他引用指向这个绑定变量的对象，它就会被当做垃圾回收掉（魔芋：这个操作由浏览器自动完成）。</p><h3 id="【q】闭包是什么？"><a href="#【q】闭包是什么？" aria-hidden="true" class="header-anchor">#</a> 【Q】闭包是什么？</h3><p>闭包（closure）是可以访问外部函数作用域中的变量的函数。（外部函数的参数也可以访问）</p><h3 id="【q】为什么闭包函数可以访问外部函数的变量？"><a href="#【q】为什么闭包函数可以访问外部函数的变量？" aria-hidden="true" class="header-anchor">#</a> 【Q】为什么闭包函数可以访问外部函数的变量？</h3><p>因为闭包函数的作用域链包含了外部函数的作用域。</p><h3 id="【q】如何创建闭包？"><a href="#【q】如何创建闭包？" aria-hidden="true" class="header-anchor">#</a> 【Q】如何创建闭包？</h3><p>在一个函数类内创建另外一个函数。内部函数使用了外部函数的变量，就形成了闭包。</p><h3 id="【q】普通函数的内部函数是闭包函数么？"><a href="#【q】普通函数的内部函数是闭包函数么？" aria-hidden="true" class="header-anchor">#</a> 【Q】普通函数的内部函数是闭包函数么？</h3><p>魔芋：不是。</p><h3 id="【q】闭包函数必须返回（return）么，return这个闭包函数？"><a href="#【q】闭包函数必须返回（return）么，return这个闭包函数？" aria-hidden="true" class="header-anchor">#</a> 【Q】闭包函数必须返回（return）么，return这个闭包函数？</h3><p>魔芋：不必要返回，只要使用外部函数的变量即可。</p><p>代码：</p><pre class="language-text"><code>function fn1() {
+    var a = 1;
+    
+
+
+function fn2() {
+    console.log(a);
+}
+
+fn2();
+
+
+}
+
+fn1();
+</code></pre><h3 id="【q】-如果用不同的变量引用函数中的闭包函数。-它们是相同的么？"><a href="#【q】-如果用不同的变量引用函数中的闭包函数。-它们是相同的么？" aria-hidden="true" class="header-anchor">#</a> 【Q】 如果用不同的变量引用函数中的闭包函数。 它们是相同的么？</h3><p>是不同的。</p><p>简单的例子：</p><pre class="language-text"><code>function outter(){
+    var x = 0;
+    return function(){
+        return x++;
+    }
+}
+var a = outter();
+console.log(a());
+console.log(a());
+var b = outter();
+console.log(b());
+console.log(b());
+</code></pre><p>运行结果为：
+0
+1
+0
+1</p><h3 id="【q】闭包的用途？"><a href="#【q】闭包的用途？" aria-hidden="true" class="header-anchor">#</a> 【Q】闭包的用途？</h3><ul><li>可以创建私有变量。</li></ul><p>因为只有闭包函数可以访问外部函数的变量。</p><h3 id="【q】请写出一个闭包实例？"><a href="#【q】请写出一个闭包实例？" aria-hidden="true" class="header-anchor">#</a> 【Q】请写出一个闭包实例？</h3><pre class="language-text"><code>function moyu(){
+    var name = &quot;魔芋&quot;;
+    return function(){
+        console.log(name+&quot; 你好~&quot;);
+}
+}
+var res = moyu();
+res();//&quot;魔芋 你好~&quot;
+</code></pre><p><img src="closure_moyu.assets/1527622788167.png" alt="1527622788167"></p><h3 id="【q】闭包的缺点："><a href="#【q】闭包的缺点：" aria-hidden="true" class="header-anchor">#</a> 【Q】闭包的缺点：</h3><ul><li>闭包函数作用域中，使用的外部函数变量不会被立刻销毁回收，所以会占用更多的内存。过度使用闭包会导致性能下降。建议在非常有必要的时候才使用闭包。</li></ul><hr><h3 id="魔芋归纳的一些注意点："><a href="#魔芋归纳的一些注意点：" aria-hidden="true" class="header-anchor">#</a> 魔芋归纳的一些注意点：</h3><p>01，同一个闭包函数，所访问的外部函数的变量是同一个变量。</p><p>02，如果把闭包函数，赋值给不同的变量，那么不同的变量指向的是不同的闭包函数，所使用的外部函数变量是不同的。</p><p>03，闭包函数分为定义时，和运行时。只有运行时，才会访问外部函数的变量。</p><p>04，在for循环的闭包函数，只有在运行时，才在作用域中寻找变量。for循环会先运行完毕，此时，闭包函数并没有运行。</p><p>例子：如果闭包中使用for的i。那么闭包中的i是for循环中的最后一个值。</p><p>05，如果在for循环中，使用闭包的自执行函数。那么闭包会使用for循环的变量i（0-*，假设i从0开始）。</p><p>06，一个函数里，可以有多个闭包。</p><h3 id="【q】闭包和内存泄漏？"><a href="#【q】闭包和内存泄漏？" aria-hidden="true" class="header-anchor">#</a> 【Q】闭包和内存泄漏？</h3><p>在IE中，JS对象和DOM对象使用不同的垃圾收集机制。</p><p>事件绑定中的匿名函数也是闭包函数。</p><p>如果闭包函数中有HTML元素。那么该元素由于有引用，所以无法被回收。</p><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">moyu_test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+<span class="token keyword">var</span>  _div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;moyu&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+_div<span class="token punctuation">.</span><span class="token function-variable function">onclick</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>_div<span class="token punctuation">.</span>innerHTML<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token function">moyu_test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//这里_div元素有引用，除非浏览器关闭才会回收。</span>
+
+
+</code></pre><p>改进方式：主动解除引用。</p><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">moyu_test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+<span class="token keyword">var</span>  _div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;moyu&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+_div<span class="token punctuation">.</span><span class="token function-variable function">onclick</span><span class="token operator">=</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>_div<span class="token punctuation">.</span>innerHTML<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+_div<span class="token operator">=</span><span class="token keyword">null</span><span class="token punctuation">;</span><span class="token comment">//解除引用</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token function">moyu_test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+</code></pre><h3 id="【q】闭包中的this？"><a href="#【q】闭包中的this？" aria-hidden="true" class="header-anchor">#</a> 【Q】闭包中的this？</h3><p>对于某个函数来说，如果函数在全局环境中，this指向window。</p><p>如果在对象中，就指向这个对象。</p><p>而对象中的闭包函数，this指向window。因为闭包并不属于这个对象的属性或方法。</p><pre class="language-javascript"><code><span class="token keyword">var</span> user <span class="token operator">=</span> <span class="token string">'The Window'</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    user <span class="token punctuation">:</span> <span class="token string">'The Object'</span><span class="token punctuation">,</span>
+    getUserFunction <span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">//闭包不属于obj，里面的this 指向window</span>
+            <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>user<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span><span class="token function">getUserFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//The window</span>
+<span class="token comment">//可以强制指向某个对象</span>
+<span class="token function">alert</span><span class="token punctuation">(</span>obj<span class="token punctuation">.</span><span class="token function">getUserFunction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//The Object</span>
+<span class="token comment">//也可以从上一个作用域中得到对象</span>
+getUserFunction <span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span> <span class="token comment">//从对象的方法里得对象</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> that<span class="token punctuation">.</span>user<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="【q】闭包和arguments"><a href="#【q】闭包和arguments" aria-hidden="true" class="header-anchor">#</a> 【Q】闭包和arguments?</h3><p>arguments是函数的实参对象。闭包有自己的arguments，所以无法直接访问外部函数的arguments。可以将外部函数的arguments保存到一个变量中，然后在闭包中使用。</p><hr><h3 id="【判断题】"><a href="#【判断题】" aria-hidden="true" class="header-anchor">#</a> 【判断题】</h3><h6 id="题1："><a href="#题1：" aria-hidden="true" class="header-anchor">#</a> 题1：</h6><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">createFunctions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        result<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">return</span> num<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> res <span class="token operator">=</span> <span class="token function">createFunctions</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>结果为5；</p><p>魔芋解析：在for循环中，数组元素赋值调用了闭包函数，此时<code>num为</code>for循环中的<code>i</code>值。</p><p>考察点：闭包函数在调用时，从作用域查找变量值。</p><h6 id="题2："><a href="#题2：" aria-hidden="true" class="header-anchor">#</a> 题2：</h6><pre class="language-js"><code><span class="token keyword">var</span> subduction <span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    
+<span class="token keyword">var</span> moyu <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> moyu <span class="token operator">-=</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">subduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">subduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">subduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/*moyu等于几？*/</span>
+</code></pre><p>结果为-3。</p><p>考察点：同一个闭包变量使用同样的变量。</p><h6 id="题3："><a href="#题3：" aria-hidden="true" class="header-anchor">#</a> 题3：</h6><pre class="language-js"><code><span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> o <span class="token operator">=</span> <span class="token punctuation">{</span>
+    num<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    add<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'add'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'closure'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>num <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    sub<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+o<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>o<span class="token punctuation">.</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> sub <span class="token operator">=</span> o<span class="token punctuation">.</span>sub<span class="token punctuation">;</span>
+<span class="token function">sub</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 请写出输出结果</span>
+
+
+</code></pre><p><img src="closure_moyu.assets/1527656311145.png" alt="1527656311145"></p><p>魔芋的解释：</p><p>01，o.add();</p><p>第一个console.log('add', this);//输出o这个对象。</p><p>在对象方法中，方法中的this指向这个对象。</p><p>第一个this.num = 3;</p><p>表示：o.num =3;</p><p>02，匿名自执行函数中的this，指向全局环境变量。为window。</p><p>所以</p><p>(function() {</p><p>​            console.log('closure', this);//这里的this是指向哪里？window</p><p>​            console.log(this.num);//1</p><p>​            this.num = 4;//window.num = 4;</p><p>})();</p><p>匿名自执行函数的this.num为window.num。为1。</p><p>this.num = 4;//window.num = 4;</p><p>03，</p><p>console.log(o.num);//3，因为前面修改了o.num=3；</p><p>04，console.log(num);//4</p><p>这里，num为window.num。</p><p>05，var sub = o.sub;</p><p>sub();//4</p><p>魔芋：sub为函数。全局函数中的this指向全局环境，也就是window。</p><p>所以为window.num为4；</p><h6 id="题4："><a href="#题4：" aria-hidden="true" class="header-anchor">#</a> 题4：</h6><pre class="language-js"><code><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i <span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>结果为1秒后的9个10。</p><p><img src="closure_moyu.assets/1527656577721.png" alt="1527656577721"></p><p>魔芋解析：for循环结束后，<code>i</code>值为10，在任务队列中加入9个定时器。1秒后，调用闭包函数，此时闭包函数在作用域中使用<code>i</code>值。</p><p>考察点：闭包函数在调用时，使用变量的当前值。</p><h6 id="题5："><a href="#题5：" aria-hidden="true" class="header-anchor">#</a> 题5：</h6><pre class="language-js"><code><span class="token comment">// 变体一</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> i <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>结果，每隔1秒，依次的输出1到9。</p><p><img src="closure_moyu.assets/1527657051063.png" alt="1527657051063"></p><p>魔芋解析：在for循环中，每次调用匿名自执行函数。定时器中的闭包函数使用的是传递进来的for的<code>i</code>值（1-9）。</p><p>考察点：闭包函数在调用时，使用变量的当前值。</p><h6 id="题6："><a href="#题6：" aria-hidden="true" class="header-anchor">#</a> 题6：</h6><pre class="language-js"><code><span class="token comment">// 变体二</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> i <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>结果：每隔1秒输出10。进行9次。</p><p><img src="closure_moyu.assets/1527657323488.png" alt="1527657323488"></p><p>魔芋解析：每次for循环中，给任务队列加入定时器，定时器中的闭包函数，在定义时，并没有传递i值。所以闭包函数在调用时，在自己的作用域中使用for循环结束后的i值。</p><h6 id="题7："><a href="#题7：" aria-hidden="true" class="header-anchor">#</a> 题7：</h6><pre class="language-js"><code><span class="token comment">// 变体三</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> i <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>结果：</p><p>依次输出9个undefined。</p><p><img src="closure_moyu.assets/1527657728413.png" alt="1527657728413"></p><p>魔芋解析：在定时器中的闭包函数，它有形参<code>i</code>，但是，并没有传递实参。所以形参i的值为undefined。i*1000 的i还是来自for循环中的i。</p></div><div class="content edit-link"><a href="https://github.com/Mountain-Buzhou/Interview-Book/edit/vuepress/docs/Collection/closure_moyu.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div><!----></div></div></div>
+    <script src="/Interview-Book/assets/js/15.73cb8c19.js" defer></script><script src="/Interview-Book/assets/js/app.5bb2cac5.js" defer></script>
+  </body>
+</html>

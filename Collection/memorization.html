@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Interview Book | Q: 函数记忆是什么？什么场景下使用？（动态规划）</title>
+    <meta name="description" content="前端面试题以及前端知识点梳理">
+    
+    
+    <link rel="preload" href="/Interview-Book/assets/css/31.styles.abdfda26.css" as="style"><link rel="preload" href="/Interview-Book/assets/js/app.5bb2cac5.js" as="script"><link rel="preload" href="/Interview-Book/assets/js/13.3a140532.js" as="script"><link rel="prefetch" href="/Interview-Book/assets/js/15.73cb8c19.js"><link rel="prefetch" href="/Interview-Book/assets/js/0.fa55fd76.js"><link rel="prefetch" href="/Interview-Book/assets/js/1.42f91184.js"><link rel="prefetch" href="/Interview-Book/assets/js/2.855ab1b4.js"><link rel="prefetch" href="/Interview-Book/assets/js/3.e8fce265.js"><link rel="prefetch" href="/Interview-Book/assets/js/4.08e14bbe.js"><link rel="prefetch" href="/Interview-Book/assets/js/5.b4aca0a2.js"><link rel="prefetch" href="/Interview-Book/assets/js/6.48e246c3.js"><link rel="prefetch" href="/Interview-Book/assets/js/7.314c79e2.js"><link rel="prefetch" href="/Interview-Book/assets/js/8.a4751570.js"><link rel="prefetch" href="/Interview-Book/assets/js/9.34beea8b.js"><link rel="prefetch" href="/Interview-Book/assets/js/10.9a71a14d.js"><link rel="prefetch" href="/Interview-Book/assets/js/11.a9794c03.js"><link rel="prefetch" href="/Interview-Book/assets/js/12.74576756.js"><link rel="prefetch" href="/Interview-Book/assets/js/14.860bd71a.js"><link rel="prefetch" href="/Interview-Book/assets/js/16.74524187.js"><link rel="prefetch" href="/Interview-Book/assets/js/17.449fcfbc.js"><link rel="prefetch" href="/Interview-Book/assets/js/18.8d02e026.js"><link rel="prefetch" href="/Interview-Book/assets/js/19.809df8fe.js"><link rel="prefetch" href="/Interview-Book/assets/js/20.6d3cb1ce.js"><link rel="prefetch" href="/Interview-Book/assets/js/21.4b33f39f.js"><link rel="prefetch" href="/Interview-Book/assets/js/22.5b526472.js"><link rel="prefetch" href="/Interview-Book/assets/js/23.116cfae7.js"><link rel="prefetch" href="/Interview-Book/assets/js/24.06f1e64c.js"><link rel="prefetch" href="/Interview-Book/assets/js/25.dc8aafae.js"><link rel="prefetch" href="/Interview-Book/assets/js/26.3bb6309e.js"><link rel="prefetch" href="/Interview-Book/assets/js/27.56fb8f90.js"><link rel="prefetch" href="/Interview-Book/assets/js/28.16962525.js"><link rel="prefetch" href="/Interview-Book/assets/js/29.4cda0dc1.js"><link rel="prefetch" href="/Interview-Book/assets/js/30.53cbda7e.js">
+    <link rel="stylesheet" href="/Interview-Book/assets/css/31.styles.abdfda26.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/Interview-Book/" class="home-link router-link-active"><!----><span class="site-name">
+      Interview Book
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/Interview-Book/guide/" class="nav-link">Guide</a></div><a href="https://github.com/Mountain-Buzhou/Interview-Book" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/Interview-Book/guide/" class="nav-link">Guide</a></div><a href="https://github.com/Mountain-Buzhou/Interview-Book" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav><!----></div><div class="page"><div class="content"><h2 id="q-函数记忆是什么？什么场景下使用？（动态规划）"><a href="#q-函数记忆是什么？什么场景下使用？（动态规划）" aria-hidden="true" class="header-anchor">#</a> Q: 函数记忆是什么？什么场景下使用？（动态规划）</h2><h2 id="a："><a href="#a：" aria-hidden="true" class="header-anchor">#</a> A：</h2><p>01，将上次计算结果保存起来的函数，称为有记忆能力（memorization）的函数。</p><pre class="language-text"><code>function memorize(f) {
+    var cache = {}; 
+    return function() {
+         var key = arguments.length + Array.prototype.join.call(arguments,&quot;,&quot;);
+         if (key in cache) return cache[key];
+         else return cache[key] = f.apply(this, arguments);
+    };
+}
+</code></pre><ul><li>01，利用闭包，将结算结果保存在私有的缓存对象里。</li><li>02，将实参长度加实参参数作为缓存对象属性。</li><li>03，如果key属性不存在，就将结果保存在key属性的值。</li></ul><p>下面的代码展示了如何使用memorize()：</p><pre class="language-text"><code>// 返回两个整数的最大公约数
+// 使用欧几里德算法:http://en.wikipedia.org/wiki/Euclidean_algorithm
+function gcd(a,b) {                     // 这里省略对a和b的类型检查
+    var t;                              // 临时变量用来存储交换数值
+    if (a &lt; b) t=b, b=a, a=t;           // 确保 a &gt;= b
+    while(b != 0) t=b, b = a%b, a=t;    // 这是求最大公约数的欧几里德算法
+    return a;
+}
+var gcdmemo = memorize(gcd);
+gcdmemo(85, 187) // =&gt; 17
+</code></pre><p>代码分析By魔芋</p><p>var gcdmemo = memorize(gcd);</p><p>f=gcd(a,b);</p><p>第一次调用时，cache为空对象。 gcdmemo为返回的匿名函数。</p><p>key为285,187</p><p>第二次调用时，cache.key已存在，将直接返回计算值。</p><hr><p>应用一：实现记忆功能的递归函数：</p><pre class="language-text"><code>var factorial = memorize(function(n) {  
+      return (n &lt;= 1) ? 1 : n * factorial(n-1);
+            });
+factorial(5)            // =&gt; 120.对于4~1的值也有缓存
+</code></pre><p>应用二：数组去重：</p><pre class="language-text"><code>unction unique(arr) {
+  var ret = []
+  var hash = {}
+  for (var i = 0; i &lt; arr.length; i++) {
+    var item = arr[i]
+    var key = typeof(item) + item;
+    if (hash[key] !== 1) {
+      ret.push(item)
+      hash[key] = 1
+    }
+  }
+  return ret;
+}
+</code></pre><p>**</p></div><div class="content edit-link"><a href="https://github.com/Mountain-Buzhou/Interview-Book/edit/vuepress/docs/Collection/memorization.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div><!----></div></div></div>
+    <script src="/Interview-Book/assets/js/13.3a140532.js" defer></script><script src="/Interview-Book/assets/js/app.5bb2cac5.js" defer></script>
+  </body>
+</html>
