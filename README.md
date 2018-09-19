@@ -298,7 +298,7 @@ Table of Contents
 - [实现events(发布订阅/观察者模式)](/docs/Collection/Events.md)
 - 找出数组中最大的两数之差
 - 棋盘最短路：动态规划、搜索+剪枝、时间优化、空间优化
-- [二叉树遍历：前序、后序、中序，时间复杂度，空间复杂度O(1)，递归非递归](https://github.com/MrTreasure/Algorithm/blob/master/src/Tree/BinaryTree.ts)
+- 二叉树遍历：前序、后序、中序，时间复杂度，空间复杂度O(1)，递归非递归
 - 双向链表寻找中间的元素，单向链表寻找中间的元素
 - 查找数组中第k大的数 
 
