@@ -413,6 +413,8 @@ Table of Contents
 - 路由选择：RIP、OSPF、BGP
 - 差错检验和纠正技术
 - 计算机网络安全
+- 七层网络模型
+- http和https的区别
 
 ### Algorithm
 - 递归与非递归
